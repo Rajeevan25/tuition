@@ -17,7 +17,6 @@ export default function LandingPage() {
             <Link className="text-slate-600 hover:text-indigo-500 transition-colors" href="/solutions">Solutions</Link>
             <Link className="text-slate-600 hover:text-indigo-500 transition-colors" href="/resources">Resources</Link>
             <Link className="text-slate-600 hover:text-indigo-500 transition-colors" href="/pricing">Pricing</Link>
-            <Link className="text-emerald-600 font-bold hover:text-emerald-500 transition-colors border-l pl-8 border-outline-variant/10" href="/platform/admin/applications">Admin Demo</Link>
           </div>
           <div className="flex items-center gap-4">
             <Link href="/login" className="hidden font-semibold text-slate-600 hover:text-indigo-600 transition-colors sm:block">Log In</Link>
