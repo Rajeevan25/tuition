@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CenterHub - Add Student</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#eff4ff",
+                        "surface-bright": "#f8f9ff",
+                        "primary-fixed": "#e2dfff",
+                        "surface-container-high": "#dce9ff",
+                        "on-primary-fixed": "#0f0069",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#213145",
+                        "outline": "#777587",
+                        "secondary-container": "#d5e0f8",
+                        "on-secondary-fixed": "#111c2d",
+                        "on-surface": "#0b1c30",
+                        "on-tertiary-fixed": "#001e2f",
+                        "tertiary": "#004d70",
+                        "surface-container": "#e5eeff",
+                        "surface-container-highest": "#d3e4fe",
+                        "tertiary-fixed-dim": "#89ceff",
+                        "on-secondary-container": "#586377",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#c9e6ff",
+                        "surface-dim": "#cbdbf5",
+                        "inverse-primary": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "on-tertiary-container": "#b8e0ff",
+                        "tertiary-container": "#006693",
+                        "inverse-on-surface": "#eaf1ff",
+                        "primary": "#3525cd",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-primary-container": "#dad7ff",
+                        "outline-variant": "#c7c4d8",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "secondary": "#545f73",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "surface-variant": "#d3e4fe",
+                        "primary-container": "#4f46e5",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "on-tertiary-fixed-variant": "#004c6e",
+                        "on-background": "#0b1c30",
+                        "background": "#f8f9ff",
+                        "secondary-fixed": "#d8e3fb",
+                        "surface": "#f8f9ff",
+                        "surface-tint": "#4d44e3",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9ff;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 hidden md:flex flex-col border-r-0 fixed left-0 top-0 h-full p-4 overflow-y-auto bg-slate-50 dark:bg-slate-950 font-['Inter'] text-sm font-medium z-40">
+<div class="mb-8 px-2 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">CenterHub</h2>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">Enterprise Admin</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 transition-transform" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 transition-transform" href="#">
+<span class="material-symbols-outlined">school</span>
+<span>Classes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm rounded-lg font-bold scale-[0.99] transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span>Students</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 transition-transform" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span>Curriculum</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 transition-transform" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span>Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 transition-transform" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 transition-transform" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 transition-transform" href="#">
+<span class="material-symbols-outlined">help</span>
+<span>Help</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="md:ml-64 min-h-screen pb-24 md:pb-12">
+<!-- Top Nav Branding (Mobile Only) -->
+<header class="md:hidden flex items-center justify-between px-6 py-4 bg-white/70 backdrop-blur-xl sticky top-0 z-50">
+<span class="text-2xl font-black tracking-tighter text-indigo-600">CenterHub</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</div>
+</header>
+<!-- Centered Container -->
+<div class="max-w-4xl mx-auto px-6 pt-8 md:pt-12">
+<!-- Header Section -->
+<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<nav class="flex items-center gap-2 text-label-sm text-slate-500 mb-2 uppercase tracking-widest font-bold text-[10px]">
+<span>Students</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary">Add New Profile</span>
+</nav>
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface">Create Student Record</h1>
+<p class="text-slate-500 mt-1">Populate the fields below to register a new student in the hub.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-6 py-2.5 rounded-full text-sm font-semibold bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors">Discard</button>
+<button class="px-8 py-2.5 rounded-full text-sm font-semibold bg-gradient-to-br from-primary to-primary-container text-white shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">save</span>
+                        Save Profile
+                    </button>
+</div>
+</div>
+<!-- Form Content -->
+<div class="space-y-8">
+<!-- Section: Personal Info -->
+<section class="bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+<h3 class="text-lg font-bold font-headline">Personal Information</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="col-span-1 md:col-span-2">
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Full Legal Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-slate-300" placeholder="e.g. Benjamin Franklin" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Date of Birth</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all" type="date"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Gender</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all appearance-none">
+<option>Select gender</option>
+<option>Male</option>
+<option>Female</option>
+<option>Non-binary</option>
+<option>Prefer not to say</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Section: School & Enrollment -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+<div class="md:col-span-2 bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm h-full">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<h3 class="text-lg font-bold font-headline">School Information</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Current School</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-slate-300" placeholder="Enter school name" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Grade Level</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all appearance-none">
+<option>Select Grade</option>
+<option>Kindergarten</option>
+<option>1st Grade</option>
+<option>2nd Grade</option>
+<option>3rd Grade</option>
+<option>4th Grade</option>
+<option>5th Grade</option>
+</select>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 bg-surface-container-low p-6 md:p-8 rounded-xl h-full flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+<h3 class="text-lg font-bold font-headline">Enrollment</h3>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Assign to Class</label>
+<select class="w-full bg-white border-0 rounded-lg px-4 py-3 focus:ring-4 focus:ring-primary/10 outline-none transition-all shadow-sm">
+<option>Unassigned</option>
+<option>Advanced Robotics A</option>
+<option>Creative Writing 101</option>
+<option>Early Mathematics</option>
+</select>
+</div>
+<div class="p-3 bg-white/50 rounded-lg border border-white/20">
+<p class="text-[11px] text-slate-600 leading-relaxed italic">
+                                        Assigning a student to a class will automatically trigger a notification to the assigned instructor.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Guardian Info -->
+<section class="bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined text-[20px]">family_restroom</span>
+</div>
+<h3 class="text-lg font-bold font-headline">Guardian Details</h3>
+</div>
+<button class="text-primary text-sm font-semibold flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                            Add Secondary Guardian
+                        </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Primary Guardian Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-slate-300" placeholder="Full name" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Phone Number</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-slate-300" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Email Address</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-slate-300" placeholder="guardian@email.com" type="email"/>
+</div>
+</div>
+</section>
+</div>
+<!-- Profile Image Section (Asymmetric Bento Style) -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-1">
+<div class="aspect-square bg-surface-container-high rounded-2xl overflow-hidden group relative cursor-pointer">
+<img alt="Student portrait placeholder" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Close-up portrait of a cheerful young student in a bright classroom setting with soft natural window lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEqdL8yUbl7YtJRwjlVscVsHULAtDMLXsNk44lBAQR3o3AVc9n76Bqsj6bs6VAcMQsWGIREN_TNjfDTC71XFd3w9e2k2OQiPiqNjGCJvtZHetwV3akh-MuYD14hoG0UIo0FBTFmBz12WFCT_6HoiWuYwOEIJgErj6P3Txr9i28driyAcAx-XCY8rItNzKx-zurdx84wktHorlzf4MVedQfGL8XUE8EE2AectmUumaKIJET9FzSwsgRwwEQCAxWJBo563Cs_LbRFABT"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-3xl">photo_camera</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-3 bg-surface-container-lowest p-6 rounded-2xl flex flex-col justify-center border border-dashed border-outline-variant/50">
+<h4 class="font-bold text-on-surface mb-2">Profile Avatar</h4>
+<p class="text-sm text-slate-500 mb-4 max-w-md">Upload a clear front-facing photo of the student. This helps instructors and staff identify students quickly during check-ins.</p>
+<div class="flex gap-4">
+<button class="bg-indigo-50 text-primary px-4 py-2 rounded-lg text-sm font-bold hover:bg-indigo-100 transition-colors">Upload Photo</button>
+<button class="text-slate-400 px-4 py-2 rounded-lg text-sm font-bold hover:text-slate-600 transition-colors">Remove</button>
+</div>
+</div>
+</div>
+<!-- Sticky Actions Mobile -->
+<div class="md:hidden fixed bottom-24 left-6 right-6 z-40">
+<button class="w-full bg-primary text-white py-4 rounded-2xl font-bold shadow-xl shadow-primary/30 flex items-center justify-center gap-3 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">check_circle</span>
+                    Create Record
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 md:hidden bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-100/50 rounded-t-[2rem] shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 transition-colors" href="#">
+<span class="material-symbols-outlined">class</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Classes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-2xl px-4 py-2 scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Profile</span>
+</a>
+</nav>
+<!-- Success Toast Preview (Fixed Position) -->
+<div class="fixed top-24 right-8 z-[60] flex items-center gap-4 bg-white p-4 rounded-2xl shadow-[0_20px_50px_-12px_rgba(11,28,48,0.12)] border border-emerald-50 max-w-sm animate-in fade-in slide-in-from-right duration-500">
+<div class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined">done_all</span>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Draft Saved Successfully</p>
+<p class="text-xs text-slate-500">All student data has been synced to the server.</p>
+</div>
+<button class="text-slate-300 hover:text-slate-500 ml-2">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</body></html>

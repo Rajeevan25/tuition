@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CenterHub Classes Module</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary": "#ffffff",
+                "surface-container-low": "#eff4ff",
+                "surface-bright": "#f8f9ff",
+                "primary-fixed": "#e2dfff",
+                "surface-container-high": "#dce9ff",
+                "on-primary-fixed": "#0f0069",
+                "on-error": "#ffffff",
+                "inverse-surface": "#213145",
+                "outline": "#777587",
+                "secondary-container": "#d5e0f8",
+                "on-secondary-fixed": "#111c2d",
+                "on-surface": "#0b1c30",
+                "on-tertiary-fixed": "#001e2f",
+                "tertiary": "#004d70",
+                "surface-container": "#e5eeff",
+                "surface-container-highest": "#d3e4fe",
+                "tertiary-fixed-dim": "#89ceff",
+                "on-secondary-container": "#586377",
+                "secondary-fixed-dim": "#bcc7de",
+                "on-primary": "#ffffff",
+                "tertiary-fixed": "#c9e6ff",
+                "surface-dim": "#cbdbf5",
+                "inverse-primary": "#c3c0ff",
+                "on-surface-variant": "#464555",
+                "on-tertiary-container": "#b8e0ff",
+                "tertiary-container": "#006693",
+                "inverse-on-surface": "#eaf1ff",
+                "primary": "#3525cd",
+                "primary-fixed-dim": "#c3c0ff",
+                "on-primary-container": "#dad7ff",
+                "outline-variant": "#c7c4d8",
+                "error-container": "#ffdad6",
+                "on-error-container": "#93000a",
+                "secondary": "#545f73",
+                "on-secondary": "#ffffff",
+                "error": "#ba1a1a",
+                "on-secondary-fixed-variant": "#3c475a",
+                "surface-variant": "#d3e4fe",
+                "primary-container": "#4f46e5",
+                "on-primary-fixed-variant": "#3323cc",
+                "on-tertiary-fixed-variant": "#004c6e",
+                "on-background": "#0b1c30",
+                "background": "#f8f9ff",
+                "secondary-fixed": "#d8e3fb",
+                "surface": "#f8f9ff",
+                "surface-tint": "#4d44e3",
+                "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "2xl": "1rem",
+                "3xl": "1.5rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Desktop Side Navigation -->
+<aside class="fixed left-0 top-0 h-full p-4 overflow-y-auto h-screen w-64 hidden md:flex flex-col bg-slate-50 dark:bg-slate-950 font-['Inter'] text-sm font-medium z-40">
+<div class="mb-8 px-2 flex items-center gap-3">
+<div class="w-8 h-8 rounded-xl bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">school</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-slate-900 dark:text-white leading-none">CenterHub</h1>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Enterprise Admin</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-transform active:scale-[0.99] rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm rounded-lg font-bold transition-transform active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span> Classes
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-transform active:scale-[0.99] rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span> Students
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-transform active:scale-[0.99] rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span> Curriculum
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-transform active:scale-[0.99] rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span> Analytics
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-transform active:scale-[0.99] rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span> Settings
+            </a>
+</nav>
+<div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span> Support
+            </a>
+<button class="w-full mt-4 bg-primary text-white py-2.5 rounded-xl font-semibold shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span> New Project
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="md:ml-64 pb-24 md:pb-8 min-h-screen">
+<!-- Header -->
+<header class="sticky top-0 z-30 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl px-6 py-4 flex justify-between items-center shadow-sm dark:shadow-none">
+<div class="flex flex-col">
+<h2 class="text-2xl font-black tracking-tighter text-indigo-600 dark:text-indigo-400 font-headline">Classes</h2>
+<p class="text-on-surface-variant text-xs font-medium">Manage and monitor all active curriculum sessions</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/10">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-outline" placeholder="Search classes..." type="text"/>
+</div>
+<img alt="User profile" class="w-10 h-10 rounded-full border-2 border-primary-fixed" data-alt="close-up portrait of a professional woman with a friendly smile in a modern office environment with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfnKFBe9Wn0aceocXQZ-eRr8NB2rDUt9ZcMCoCW7o66JP35KBO75XE5J7nIpOM2QF3Me5Mzd1B63mZhq035UntBf0D3wlUTYEsdJzVn3dA3vkhuvJs9y5OD3Fs-VQYaiadBHXowmV6cUcd3H-92kK_ZSJxU_PyA7s2xjZrSDsfMjXsH_lYGUastKLVctw9VuhSZc1Cl7IfKERRmCgpJmlF_ZCII5t-Rt1fwhYmy7Xc6nde-xCHMPMjTLuCtdgxM36y9OnO84uiraTJ"/>
+</div>
+</header>
+<!-- Filters Section -->
+<section class="px-6 py-6 overflow-x-auto whitespace-nowrap scrollbar-hide flex items-center gap-3">
+<button class="bg-primary text-white px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                All Classes
+            </button>
+<div class="h-6 w-px bg-outline-variant/30"></div>
+<button class="bg-surface-container-high text-on-surface px-5 py-2 rounded-full text-sm font-medium hover:bg-surface-container-highest transition-colors">
+                Mathematics
+            </button>
+<button class="bg-surface-container-high text-on-surface px-5 py-2 rounded-full text-sm font-medium hover:bg-surface-container-highest transition-colors">
+                Science
+            </button>
+<button class="bg-surface-container-high text-on-surface px-5 py-2 rounded-full text-sm font-medium hover:bg-surface-container-highest transition-colors">
+                Grade 10-12
+            </button>
+<button class="bg-surface-container-high text-on-surface px-5 py-2 rounded-full text-sm font-medium hover:bg-surface-container-highest transition-colors flex items-center gap-2">
+                More Filters <span class="material-symbols-outlined text-sm">tune</span>
+</button>
+</section>
+<!-- Classes Grid -->
+<section class="px-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Class Card 1 -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-primary/10 rounded-2xl">
+<span class="material-symbols-outlined text-primary" data-icon="functions">functions</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Fee</span>
+<span class="text-lg font-black text-indigo-600 font-headline">$450.00</span>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded uppercase">Science &amp; Math</span>
+<span class="px-2 py-0.5 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded uppercase">Grade 11</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface leading-tight group-hover:text-primary transition-colors">Advanced Algebra II</h3>
+<p class="text-sm text-slate-500 mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+                        Mon, Wed • 10:00 AM - 11:30 AM
+                    </p>
+</div>
+<div class="flex items-center gap-3 py-4 border-t border-dashed border-outline-variant/30">
+<img alt="Teacher" class="w-8 h-8 rounded-full" data-alt="professional portrait of an elderly male teacher with glasses and a warm expression, scholarly academic setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUt45mTNPYUPo-OuoUypImchjIyDsR0LlgP5khM5_fbNZYib4dFUTOzGL1z8U4svYbAfyB90tbM1Rr34Zmd0-fz-iSBgDxtM0wTK9kqTUTMdmLTvi7STvg-VZ2FzPLSQC3omARHK84JZAwJyMcip_1ZIwobbe2Cxm7Evr4bF_ykOjNTrJ0L2y4c99LnBLEY3fmPbirsRdYRNrYj9JbQ8-wKRc8L1rFPvJhaRdOn7LTrvQvmr77zjBXX1cZ-OYtT3jBx-tirm6xF9X-"/>
+<div class="flex flex-col">
+<span class="text-xs text-slate-400">Instructor</span>
+<span class="text-sm font-bold">Dr. Marcus Sterling</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-semibold text-slate-500">Class Capacity</span>
+<span class="text-xs font-bold text-on-surface">18 / 20 Students</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[90%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Class Card 2 -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-tertiary/10 rounded-2xl">
+<span class="material-symbols-outlined text-tertiary" data-icon="biotech">biotech</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Fee</span>
+<span class="text-lg font-black text-indigo-600 font-headline">$520.00</span>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded uppercase">Science</span>
+<span class="px-2 py-0.5 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded uppercase">Grade 12</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface leading-tight group-hover:text-primary transition-colors">Quantum Physics Intro</h3>
+<p class="text-sm text-slate-500 mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+                        Tue, Thu • 01:00 PM - 02:30 PM
+                    </p>
+</div>
+<div class="flex items-center gap-3 py-4 border-t border-dashed border-outline-variant/30">
+<img alt="Teacher" class="w-8 h-8 rounded-full" data-alt="medium shot of a young female teacher with headphones, modern educational studio background with books and plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpGQDLTX7oYl9nA-Pk8acJClKHg6tRT9MGTBAG3HaXnqYaV-rt8uHwUnI5SXS2bvSccDQdALxHWpjQleIp57W3o-Uo0MwJqREJI4r38NnSobEPAVxjr8fh017-bIUAgLYm25H-nnVovgk1NZIZuxzH02cBgVhI2dstSctuyq0bYJiEq0RK51o62FgtZ6QHgSbSas2SZnHIaoSbhJNWrzUeFuy3s4eVVn-41i9UuIfK1ZipJDHgaDjl-wTh-dsO6Alt4LRw30PRzero"/>
+<div class="flex flex-col">
+<span class="text-xs text-slate-400">Instructor</span>
+<span class="text-sm font-bold">Prof. Sarah Jenkins</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-semibold text-slate-500">Class Capacity</span>
+<span class="text-xs font-bold text-on-surface">12 / 15 Students</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[80%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Class Card 3 -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-secondary/10 rounded-2xl">
+<span class="material-symbols-outlined text-secondary" data-icon="history_edu">history_edu</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Fee</span>
+<span class="text-lg font-black text-indigo-600 font-headline">$380.00</span>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded uppercase">Humanities</span>
+<span class="px-2 py-0.5 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded uppercase">Grade 10</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface leading-tight group-hover:text-primary transition-colors">Modern World History</h3>
+<p class="text-sm text-slate-500 mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+                        Mon, Fri • 09:00 AM - 10:30 AM
+                    </p>
+</div>
+<div class="flex items-center gap-3 py-4 border-t border-dashed border-outline-variant/30">
+<img alt="Teacher" class="w-8 h-8 rounded-full" data-alt="close-up of a middle-aged male teacher with a thoughtful expression, dressed in a casual blazer, classroom setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqq4D6iLPnXZ64DG-DugwZbaOc_xDwA6025QP_SKsOkC00bc5KvQFjN5hlI-Mu4q_-Hxu-6h1Z4xl_kJon6ht8Z8Cd39rkv58OyaJe-mQAkILoArAmMLD6vduhFT9AxKd6-veMGABwLOjbHIRHXbtkjc7VGX2AVaoZUFywcILnVxFi_JTUHcCDWUQ_03zuzS5n7m8bgoPorE17RFWDm89NTZgbV-vFpHl3py0kyWo0Ut-hcy0wAFQ739sALVLdLlNXOjiv4TUsv9yk"/>
+<div class="flex flex-col">
+<span class="text-xs text-slate-400">Instructor</span>
+<span class="text-sm font-bold">James Patterson</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-semibold text-slate-500">Class Capacity</span>
+<span class="text-xs font-bold text-error">15 / 15 Students (Full)</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-error w-full rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Class Card 4 -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-primary/10 rounded-2xl">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Fee</span>
+<span class="text-lg font-black text-indigo-600 font-headline">$600.00</span>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded uppercase">Computer Science</span>
+<span class="px-2 py-0.5 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded uppercase">Grade 11-12</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface leading-tight group-hover:text-primary transition-colors">Python for Engineers</h3>
+<p class="text-sm text-slate-500 mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+                        Wed, Sat • 03:00 PM - 05:00 PM
+                    </p>
+</div>
+<div class="flex items-center gap-3 py-4 border-t border-dashed border-outline-variant/30">
+<img alt="Teacher" class="w-8 h-8 rounded-full" data-alt="portrait of a confident woman with curly hair, tech enthusiast style, vibrant background with neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHonCCDrEqEHByufyl3DPi_fyGTnK4Ra-OfpLtJAJ-WxKYzGOnzwJGekLFinsLC4vvDnlo8d3vJz9x7U5nI0EUPc1ewIQlE5Q8l1MH-MXI6jJnePtcLZYcUr_RScvZa_rPcvV6Df0i0KdTJcGqjVmOaS28iPJG2CSLHmLaoFpTUWhcV4pmcdPa7GKRRkiX2uUbdbt512yQnm3f_0wuMHCxAvvHClyC4QAou8QshAtoBSTw0XOxtUvLiJHi_LMceSfMTPcHSQbFX-pC"/>
+<div class="flex flex-col">
+<span class="text-xs text-slate-400">Instructor</span>
+<span class="text-sm font-bold">Elena Rodriguez</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-semibold text-slate-500">Class Capacity</span>
+<span class="text-xs font-bold text-on-surface">5 / 12 Students</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[41%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Class Card 5 -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-tertiary/10 rounded-2xl">
+<span class="material-symbols-outlined text-tertiary" data-icon="palette">palette</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Fee</span>
+<span class="text-lg font-black text-indigo-600 font-headline">$300.00</span>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded uppercase">Fine Arts</span>
+<span class="px-2 py-0.5 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded uppercase">All Grades</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface leading-tight group-hover:text-primary transition-colors">Digital Illustration</h3>
+<p class="text-sm text-slate-500 mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+                        Tue, Fri • 04:00 PM - 05:30 PM
+                    </p>
+</div>
+<div class="flex items-center gap-3 py-4 border-t border-dashed border-outline-variant/30">
+<img alt="Teacher" class="w-8 h-8 rounded-full" data-alt="creative professional male with artistic attire, standing in a brightly lit art studio filled with canvases" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb88pEQmD9eJkYyjWckQx4EnqNuEVsiUBBKdFam24NZRGx2kV--mju4OmyM016BDwlBgrTo4B1B8aeJZoZ4ErpR9ezXH6EZmQLZuFHnlwmYUWh6eBJzoxYllETrKeH0QbEMDt9FwnDRpP9JKWFqfyOXW-v-nD9zR_53TO_diAiNAwOd8gUAZcr7gFaHjDyZDN_7HZpNHDHPvECIrYyngrRADRZqgx10k-SqraH6DnXlUu1XYYZyODgowU9-doPZqMQcau9RqSG0ozp"/>
+<div class="flex flex-col">
+<span class="text-xs text-slate-400">Instructor</span>
+<span class="text-sm font-bold">Liam Chen</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-semibold text-slate-500">Class Capacity</span>
+<span class="text-xs font-bold text-on-surface">22 / 25 Students</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[88%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Class Card 6 (Bento-style placeholder for new class) -->
+<div class="bg-surface-container-low rounded-3xl p-5 flex flex-col items-center justify-center border-2 border-dashed border-outline-variant/50 group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="w-16 h-16 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">add</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface">Create New Class</h3>
+<p class="text-xs text-slate-500 mt-2 text-center max-w-[180px]">Add a new curriculum session to the current semester</p>
+</div>
+</section>
+</main>
+<!-- Mobile Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md md:hidden rounded-t-[2rem] shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)] border-t border-slate-100/50 dark:border-slate-800/50 font-['Inter'] text-[10px] uppercase tracking-widest font-bold">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+            Home
+        </a>
+<a class="flex flex-col items-center justify-center bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-2xl px-4 py-2 transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="class" style="font-variation-settings: 'FILL' 1;">class</span>
+            Classes
+        </a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="mail">mail</span>
+            Inbox
+        </a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+            Profile
+        </a>
+</nav>
+<!-- Contextual FAB (Mobile Only) -->
+<button class="fixed bottom-24 right-6 md:hidden w-14 h-14 bg-primary text-white rounded-2xl shadow-xl flex items-center justify-center z-40">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+</body></html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CenterHub | Features &amp; Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#e2dfff",
+                    "surface-container-high": "#dce9ff",
+                    "on-primary-fixed": "#0f0069",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "outline": "#777587",
+                    "secondary-container": "#d5e0f8",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-surface": "#0b1c30",
+                    "on-tertiary-fixed": "#001e2f",
+                    "tertiary": "#004d70",
+                    "surface-container": "#e5eeff",
+                    "surface-container-highest": "#d3e4fe",
+                    "tertiary-fixed-dim": "#89ceff",
+                    "on-secondary-container": "#586377",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#c9e6ff",
+                    "surface-dim": "#cbdbf5",
+                    "inverse-primary": "#c3c0ff",
+                    "on-surface-variant": "#464555",
+                    "on-tertiary-container": "#b8e0ff",
+                    "tertiary-container": "#006693",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary": "#3525cd",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "on-primary-container": "#dad7ff",
+                    "outline-variant": "#c7c4d8",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "secondary": "#545f73",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "surface-variant": "#d3e4fe",
+                    "primary-container": "#4f46e5",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "on-tertiary-fixed-variant": "#004c6e",
+                    "on-background": "#0b1c30",
+                    "background": "#f8f9ff",
+                    "secondary-fixed": "#d8e3fb",
+                    "surface": "#f8f9ff",
+                    "surface-tint": "#4d44e3",
+                    "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; color: #0b1c30; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #3525cd 0%, #4f46e5 100%);
+        }
+        .hero-mesh {
+            background-color: #f8f9ff;
+            background-image: radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.05) 0px, transparent 50%), 
+                              radial-gradient(at 100% 0%, rgba(53, 37, 205, 0.05) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm flex justify-between items-center px-6 py-4 max-w-full mx-auto">
+<div class="text-2xl font-black tracking-tighter text-indigo-600 font-['Manrope']">CenterHub</div>
+<div class="hidden md:flex items-center space-x-8 font-['Manrope'] font-semibold tracking-tight">
+<a class="text-slate-600 hover:text-indigo-500 transition-colors" href="#">Platform</a>
+<a class="text-indigo-600 border-b-2 border-indigo-600" href="#">Solutions</a>
+<a class="text-slate-600 hover:text-indigo-500 transition-colors" href="#">Resources</a>
+<a class="text-slate-600 hover:text-indigo-500 transition-colors" href="#">Pricing</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden sm:block text-slate-600 font-semibold text-sm hover:text-indigo-500">Log In</button>
+<button class="signature-gradient text-white px-6 py-2.5 rounded-full font-semibold text-sm shadow-md hover:opacity-90 active:scale-95 transition-all">Start Free</button>
+</div>
+</nav>
+<main class="pt-24 pb-20 overflow-x-hidden">
+<!-- Hero Section -->
+<header class="hero-mesh relative px-6 pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden">
+<div class="max-w-6xl mx-auto text-center">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold tracking-widest uppercase mb-8">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+                    The Enterprise Standard for Education
+                </div>
+<h1 class="text-5xl md:text-7xl font-extrabold font-headline tracking-tighter text-on-surface mb-6 leading-tight">
+                    Every operation, <br/><span class="text-primary">curated to perfection.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed font-body">
+                    A sophisticated platform designed for high-performing education centers. Manage students, staff, and payments through a singular, elegant interface.
+                </p>
+<div class="relative max-w-5xl mx-auto mt-12 rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full object-cover aspect-[16/9]" data-alt="Modern minimalist dashboard interface showing high-level school analytics, revenue graphs, and student enrollment trends in a clean white environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLlK9r9TAi28BYUc9-Zpgj21BO5mvWmyFQOO58HCBTy9W95HRRsh_epbnj6cFfFFywF9hWOvs6QqKc1_WZGhdQNlGcWAmVnnR8A5uHMfOC0Q0vTR6eHRwt7c5yLVlnPX1uK1YEh90YICywriYd3iPiC3pHe8Fv7mYJFydRFXNfIwOT9OM7iQpDThy91srFSmwDUFmG1_I159jG-0w11Z2En4oyTwRfXA2cddCMsQ0XnB0yqqtm2xecXpxRpW8g4JK7ioJoyIOfGzfM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/20 to-transparent"></div>
+</div>
+</div>
+</header>
+<!-- Feature Zig-Zag Sections -->
+<div class="max-w-7xl mx-auto px-6 space-y-32 md:space-y-48">
+<!-- Student Management -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+<div class="order-2 md:order-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">group</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-extrabold font-headline mb-6 tracking-tight">Student Lifecycle Management</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-8 font-body">
+                        Elevate the enrollment experience with digital profiles that capture everything from academic history to dietary requirements. Automated waiting lists ensure you never miss a seat filling opportunity.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-on-surface font-medium">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                            Dynamic enrollment workflows
+                        </li>
+<li class="flex items-center gap-3 text-on-surface font-medium">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                            Academic tracking &amp; achievements
+                        </li>
+</ul>
+</div>
+<div class="order-1 md:order-2 bg-surface-container-low rounded-[2.5rem] p-8 md:p-12">
+<div class="glass-card rounded-2xl p-6 shadow-sm">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young student for a profile card, warm natural lighting, professional studio setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLJeDiYlmNRqqRcaQwvh2-FF06_pri-Kz6irrJUXCbihd6r12Mjvis_E31wfYcTm4kc2NsSDO8fKUlbVGHlBjgXMQVnYD1PiokoyuonowzFrWAYGl7qdDwEXnZAz2GVgiUz6dfhOxwnPK-dRX19iruqEcmSUIoKpsXnvIZKV93ZY0QNrvYfdeSqwq0IzwOBgXhF7AIRDM623niCC6tvWxhVzUOu_4SSNrjPtc7jIrPqNEj9k_hwbkD-U57Qtrfs8RHg26Mbxl6i3og"/>
+</div>
+<div>
+<h4 class="font-bold font-headline">Eleanor Fant</h4>
+<p class="text-xs text-on-surface-variant">Class of 2024 • Advanced Mathematics</p>
+</div>
+<span class="ml-auto px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold">ACTIVE</span>
+</div>
+<div class="space-y-3">
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-[85%] bg-primary"></div>
+</div>
+<div class="flex justify-between text-xs font-semibold">
+<span class="text-on-surface-variant">Attendance Rate</span>
+<span class="text-primary">85%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Teacher Portals -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+<div class="bg-surface-container-low rounded-[2.5rem] p-8 md:p-12">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-4 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2">calendar_today</span>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1">MON 10:00</div>
+<div class="text-sm font-bold">Physics 101</div>
+</div>
+<div class="bg-white p-4 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2">edit_calendar</span>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1">MON 13:00</div>
+<div class="text-sm font-bold">Lab Session</div>
+</div>
+<div class="col-span-2 bg-primary text-white p-6 rounded-xl shadow-lg">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-xs font-bold bg-white/20 px-2 py-1 rounded">Live</span>
+</div>
+<div class="text-2xl font-bold mb-1">12 Classes</div>
+<div class="text-xs opacity-80">Scheduled for this week</div>
+</div>
+</div>
+</div>
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-extrabold font-headline mb-6 tracking-tight">Empowered Educators</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-8 font-body">
+                        Give teachers the tools to focus on what matters. From mobile-friendly class rosters to intuitive curriculum planning, our teacher portals reduce administrative load by 40%.
+                    </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-surface-container">
+<div class="font-bold text-on-surface">Smart Schedules</div>
+<p class="text-xs text-on-surface-variant mt-1">Automatic conflict resolution</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container">
+<div class="font-bold text-on-surface">Course Builder</div>
+<p class="text-xs text-on-surface-variant mt-1">Drag-and-drop modules</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Attendance & Payments -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+<div class="order-2 md:order-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-extrabold font-headline mb-6 tracking-tight">Financial Precision</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-8 font-body">
+                        Automate the entire billing cycle. Generate professional invoices, track partial payments, and provide parents with a secure portal for instant clearing.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="p-2 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined">qr_code_2</span>
+</div>
+<div>
+<h4 class="font-bold">QR Check-in</h4>
+<p class="text-sm text-on-surface-variant">Contactless attendance with timestamped security.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-2 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<div>
+<h4 class="font-bold">Auto-Invoicing</h4>
+<p class="text-sm text-on-surface-variant">Set recurring billing for memberships and sessions.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="relative bg-white rounded-[2rem] shadow-xl overflow-hidden border border-surface-container">
+<div class="p-6 border-b border-surface-container flex justify-between items-center">
+<h3 class="font-bold font-headline">Recent Transactions</h3>
+<span class="material-symbols-outlined text-on-surface-variant">tune</span>
+</div>
+<div class="divide-y divide-surface-container">
+<div class="p-4 flex justify-between items-center hover:bg-surface-container-low transition-colors">
+<div class="flex gap-3 items-center">
+<div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined">add</span>
+</div>
+<div>
+<div class="font-bold text-sm">Tuition Payment - #982</div>
+<div class="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">Received • 2m ago</div>
+</div>
+</div>
+<div class="font-bold text-emerald-600">+$1,200</div>
+</div>
+<div class="p-4 flex justify-between items-center hover:bg-surface-container-low transition-colors">
+<div class="flex gap-3 items-center">
+<div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<div class="font-bold text-sm">Materials Fee - #981</div>
+<div class="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">Pending • 1h ago</div>
+</div>
+</div>
+<div class="font-bold text-on-surface">$45.00</div>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low">
+<button class="w-full bg-on-surface text-white py-3 rounded-xl font-bold text-sm hover:bg-on-surface/90 transition-all">View All Reports</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Reports & Analytics Bento -->
+<section class="mt-48 px-6 bg-surface-container-low py-32">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-extrabold font-headline mb-4">Enterprise Insights</h2>
+<p class="text-on-surface-variant text-lg">Turn operational data into strategic growth.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Analytics Main Card -->
+<div class="md:col-span-2 bg-white rounded-3xl p-8 shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="text-xl font-bold mb-1">Growth Forecast</h3>
+<p class="text-sm text-on-surface-variant">Projected enrollment for Q4</p>
+</div>
+<div class="flex gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between gap-2 px-4">
+<div class="w-full bg-surface-container rounded-t-lg" style="height: 40%"></div>
+<div class="w-full bg-surface-container rounded-t-lg" style="height: 60%"></div>
+<div class="w-full bg-surface-container rounded-t-lg" style="height: 45%"></div>
+<div class="w-full signature-gradient rounded-t-lg" style="height: 85%"></div>
+<div class="w-full bg-surface-container rounded-t-lg" style="height: 70%"></div>
+<div class="w-full bg-surface-container rounded-t-lg" style="height: 55%"></div>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="bg-primary text-white rounded-3xl p-8 shadow-lg flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+<div>
+<div class="text-4xl font-black mb-2">94%</div>
+<div class="text-sm font-medium opacity-80">Retention rate across all program levels this year.</div>
+</div>
+</div>
+<!-- Feature Highlight -->
+<div class="bg-white rounded-3xl p-8 shadow-sm border border-outline-variant/10">
+<h4 class="font-bold mb-4">Automated Reports</h4>
+<p class="text-sm text-on-surface-variant mb-6">Schedule weekly performance PDFs delivered straight to your inbox.</p>
+<div class="flex items-center gap-2 text-primary font-bold text-sm">
+                            Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<div class="md:col-span-2 bg-on-surface text-white rounded-3xl p-8 shadow-sm overflow-hidden relative">
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="max-w-md">
+<h4 class="text-xl font-bold mb-2">Parent/Student Portal</h4>
+<p class="text-sm opacity-70">A dedicated space for families to check grades, pay invoices, and receive center-wide announcements in real-time.</p>
+</div>
+<button class="bg-white text-on-surface px-8 py-3 rounded-full font-bold text-sm hover:bg-surface-container transition-colors whitespace-nowrap">Explore Portal</button>
+</div>
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/20 blur-3xl rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-4xl mx-auto px-6 py-32 text-center">
+<h2 class="text-4xl md:text-5xl font-extrabold font-headline mb-8 tracking-tighter">Ready to scale your center?</h2>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="signature-gradient text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all">Start Free Trial</button>
+<button class="bg-white border border-outline-variant/30 text-on-surface px-10 py-4 rounded-full font-bold text-lg hover:bg-surface-container-low transition-all">Book a Demo</button>
+</div>
+<p class="mt-8 text-on-surface-variant font-medium">Join 2,400+ education providers worldwide.</p>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 md:hidden bg-white/80 backdrop-blur-md flex justify-around items-center px-4 pb-6 pt-3 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)] rounded-t-[2rem]">
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-indigo-50 text-indigo-700 rounded-2xl px-4 py-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">class</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Classes</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Inbox</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Profile</span>
+</div>
+</nav>
+<!-- Footer Decoration -->
+<footer class="bg-on-surface text-white/50 py-16 px-6 hidden md:block">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-2xl font-black tracking-tighter text-white font-['Manrope']">CenterHub</div>
+<div class="flex gap-8 text-sm font-semibold uppercase tracking-widest">
+<a class="hover:text-white transition-colors" href="#">Twitter</a>
+<a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-white transition-colors" href="#">Security</a>
+<a class="hover:text-white transition-colors" href="#">Privacy</a>
+</div>
+<div class="text-xs font-medium">© 2024 CenterHub Enterprise. All rights reserved.</div>
+</div>
+</footer>
+</body></html>

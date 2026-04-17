@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CenterHub | The Architectural Curator for Modern Education</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#e2dfff",
+                    "surface-container-high": "#dce9ff",
+                    "on-primary-fixed": "#0f0069",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "outline": "#777587",
+                    "secondary-container": "#d5e0f8",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-surface": "#0b1c30",
+                    "on-tertiary-fixed": "#001e2f",
+                    "tertiary": "#004d70",
+                    "surface-container": "#e5eeff",
+                    "surface-container-highest": "#d3e4fe",
+                    "tertiary-fixed-dim": "#89ceff",
+                    "on-secondary-container": "#586377",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#c9e6ff",
+                    "surface-dim": "#cbdbf5",
+                    "inverse-primary": "#c3c0ff",
+                    "on-surface-variant": "#464555",
+                    "on-tertiary-container": "#b8e0ff",
+                    "tertiary-container": "#006693",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary": "#3525cd",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "on-primary-container": "#dad7ff",
+                    "outline-variant": "#c7c4d8",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "secondary": "#545f73",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "surface-variant": "#d3e4fe",
+                    "primary-container": "#4f46e5",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "on-tertiary-fixed-variant": "#004c6e",
+                    "on-background": "#0b1c30",
+                    "background": "#f8f9ff",
+                    "secondary-fixed": "#d8e3fb",
+                    "surface": "#f8f9ff",
+                    "surface-tint": "#4d44e3",
+                    "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; color: #0b1c30; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .glass-nav { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
+        .primary-gradient { background: linear-gradient(135deg, #3525cd 0%, #4f46e5 100%); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm px-6 py-4 flex justify-between items-center max-w-full mx-auto">
+<div class="text-2xl font-black tracking-tighter text-indigo-600">CenterHub</div>
+<div class="hidden md:flex items-center space-gap-8 gap-x-8 font-['Manrope'] font-semibold tracking-tight">
+<a class="text-indigo-600 border-b-2 border-indigo-600 hover:text-indigo-500 transition-colors" href="#">Platform</a>
+<a class="text-slate-600 hover:text-indigo-500 transition-colors" href="#">Solutions</a>
+<a class="text-slate-600 hover:text-indigo-500 transition-colors" href="#">Resources</a>
+<a class="text-slate-600 hover:text-indigo-500 transition-colors" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block text-slate-600 font-semibold px-4 py-2 hover:text-indigo-600 transition-colors">Log In</button>
+<button class="primary-gradient text-white font-bold px-6 py-2.5 rounded-full shadow-lg shadow-indigo-200 active:scale-95 transition-all">Start Free</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-6 pt-16 pb-24 lg:pt-32 lg:pb-48 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative z-10 space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-bold text-[10px] uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+                        The Future of Learning Management
+                    </div>
+<h1 class="text-5xl lg:text-7xl font-black font-headline tracking-tighter text-on-surface leading-[1.1]">
+                        The Architectural <span class="text-primary">Curator</span> for Modern Education.
+                    </h1>
+<p class="text-xl text-on-surface-variant font-body max-w-xl leading-relaxed">
+                        Streamline student management, payments, and scheduling with one elegant platform built for tuition centers.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="primary-gradient text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl shadow-indigo-100 hover:shadow-indigo-200 transition-all flex items-center gap-2">
+                            Start Free <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-full font-bold text-lg hover:bg-surface-container-highest transition-all">
+                            Book Demo
+                        </button>
+</div>
+</div>
+<!-- Dashboard Preview Hero Visual -->
+<div class="relative">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-fixed/30 blur-[120px] rounded-full"></div>
+<div class="relative bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-white/50">
+<div class="p-6 bg-surface-container-low border-b border-outline-variant/10 flex items-center justify-between">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-error/40"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary-container/40"></div>
+<div class="w-3 h-3 rounded-full bg-primary/40"></div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-32 h-2 bg-outline-variant/30 rounded-full"></div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest"></div>
+</div>
+</div>
+<div class="p-8">
+<div class="grid grid-cols-3 gap-6 mb-8">
+<div class="p-4 bg-surface-container-low rounded-xl">
+<div class="text-xs font-bold text-outline-variant uppercase mb-1">Growth</div>
+<div class="text-2xl font-black text-primary">+24%</div>
+</div>
+<div class="p-4 bg-surface-container-low rounded-xl">
+<div class="text-xs font-bold text-outline-variant uppercase mb-1">Students</div>
+<div class="text-2xl font-black text-on-surface">1.2k</div>
+</div>
+<div class="p-4 bg-surface-container-low rounded-xl">
+<div class="text-xs font-bold text-outline-variant uppercase mb-1">Revenue</div>
+<div class="text-2xl font-black text-on-surface">$14k</div>
+</div>
+</div>
+<img class="w-full rounded-xl shadow-sm border border-outline-variant/10" data-alt="sleek modern dashboard UI showing colorful student growth charts, a list of active students with avatars, and high-level metric cards" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM7AXuqQeZg0u1ZIEJ0Pph9qqV7oZ-NBvU9RGS2L5dujYMzreyg6QG7EBv7jh2MIzuScYoI4HPKEp_g8FJ76erSv384Exjuf5UdSkjKZ6Gm5kf2J9Fz7GGIfAswRZMBuvKqZJ-IJNDtQB_q5kpp6YTaK8QAtHw2x4rAoDumE6m1QDFgg7JxgUO-IL9NEkoSCqshmBrap-DKLsu1Q3-w2VQpz6dRcG1HNJJIJUcZil4antpGeAJZXlFD16mS2pJt_3DQ3uc-8Eb8hKU"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Features Section -->
+<section class="px-6 py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+<h2 class="text-4xl lg:text-5xl font-black font-headline tracking-tighter">Everything you need to <span class="text-primary">scale</span>.</h2>
+<p class="text-on-surface-variant font-medium">Precision-engineered modules for enterprise-grade management.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Feature: Student Management -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-[2rem] p-8 lg:p-12 relative overflow-hidden group">
+<div class="relative z-10 space-y-4 max-w-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">group</span>
+<h3 class="text-3xl font-black font-headline">Student Management</h3>
+<p class="text-on-surface-variant leading-relaxed">Centralize student profiles, academic history, and behavioral tracking in a single, beautiful interface.</p>
+</div>
+<div class="mt-12 -mr-12 relative">
+<img class="rounded-tl-2xl shadow-xl transform group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-500" data-alt="clean UI interface showing a list of student profiles with profile pictures, names, grades, and status badges on a light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArVXfl17Tro_wqyfAADV-2Vxv3oluqnpssRONtAqICp278AAac-MZ5HSDZadXHC28kDmPP8FT9Ia0FDvvnxLxtsMgGTZO3JXa4i8rrE87kIKDopR5bGhLWGRS0-ayewKGpMe1Xx5CXgzbw3Svi8aOYm40Xb1NyYuEjt7Gdq8ryEZ8qEvICFRF3vVCvf2nN63si3rTYVoYjzwdWMh1BYv2yMvxxuFvrKsrzXDZSxOI_LkqUrV5c-J3_TygKiJZi5tmYYYIU1ER36h1Y"/>
+</div>
+</div>
+<!-- Small Feature: Real-time Reporting -->
+<div class="md:col-span-4 bg-primary text-white rounded-[2rem] p-8 lg:p-12 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-white text-4xl">monitoring</span>
+<h3 class="text-2xl font-black font-headline mt-6 mb-4">Real-time Reporting</h3>
+<p class="text-on-primary-container leading-relaxed">Instant insights into attendance, billing cycles, and teacher performance metrics.</p>
+</div>
+<div class="pt-8 flex justify-center">
+<img class="w-full" data-alt="minimalist line chart showing an upward trend in indigo and white colors with soft drop shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwJ-oPGQGVI2jWSfV192Cr_KzsBA6zf7Z35W8qPdrlEqA1Oqwb6p4L1Hzlj7_2HJRBF8SD8q8Ubv9zXk7_yThTiwiaFs48ZE5u8tpizTEV5EyaN6fiepcP5uMrfbrrGVADuANj-qoJPozI5SFVVVbrkdlP5Dut0T3BRKy8zScARYhQufegfnYdxUcB6vdJKTn-zyUzzAXYvryPaxYWiFH3Y19lpAF92iCcjntbkf24ud25JDuC9_d3-FF1F0bAqMyg057znLPQ_0AZ"/>
+</div>
+</div>
+<!-- Small Feature: Teacher Portals -->
+<div class="md:col-span-4 bg-surface-container-highest rounded-[2rem] p-8 flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-tertiary-container text-5xl mb-6">school</span>
+<h3 class="text-2xl font-black font-headline mb-4">Teacher Portals</h3>
+<p class="text-on-surface-variant text-sm">Empower educators with dedicated tools for lesson planning and grading.</p>
+</div>
+<!-- Medium Feature: Automated Payments -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-[2rem] p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-12 overflow-hidden">
+<div class="flex-1 space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl">account_balance_wallet</span>
+<h3 class="text-3xl font-black font-headline">Automated Payments</h3>
+<p class="text-on-surface-variant leading-relaxed">Collect tuition effortlessly with automated invoicing, recurring billing, and direct bank integration.</p>
+</div>
+<div class="flex-1 w-full bg-surface-container-low p-6 rounded-2xl">
+<div class="space-y-3">
+<div class="bg-white p-3 rounded-lg flex justify-between items-center shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700"><span class="material-symbols-outlined text-[18px]">check</span></div>
+<div class="text-xs font-bold text-on-surface">Invoice #882 Paid</div>
+</div>
+<div class="text-xs font-bold text-on-surface-variant">$240.00</div>
+</div>
+<div class="bg-white/50 p-3 rounded-lg flex justify-between items-center opacity-50">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400"><span class="material-symbols-outlined text-[18px]">schedule</span></div>
+<div class="text-xs font-bold text-on-surface">Invoice #883 Scheduled</div>
+</div>
+<div class="text-xs font-bold text-on-surface-variant">$195.00</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Vertical Scalability Section -->
+<section class="px-6 py-24 bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="flex-1 space-y-8">
+<h2 class="text-4xl lg:text-6xl font-black font-headline tracking-tighter">One Engine, <span class="text-primary">Endless</span> Possibilities.</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                            While built with education at its core, CenterHub's modular architecture allows it to pivot seamlessly across industries requiring scheduling and membership management.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-indigo-50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">menu_book</span>
+</div>
+<div>
+<h4 class="text-lg font-bold">Tuition Centers</h4>
+<p class="text-sm text-on-surface-variant">Manage large cohorts, curriculum paths, and exam results.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-indigo-50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">fitness_center</span>
+</div>
+<div>
+<h4 class="text-lg font-bold">Gyms &amp; Studios</h4>
+<p class="text-sm text-on-surface-variant">Class bookings, trainer assignments, and membership tiers.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-indigo-50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">medical_services</span>
+</div>
+<div>
+<h4 class="text-lg font-bold">Clinics</h4>
+<p class="text-sm text-on-surface-variant">Patient appointments, medical history, and follow-up notifications.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-2 gap-4">
+<div class="pt-12">
+<img class="rounded-[2rem] shadow-lg mb-4" data-alt="professional modern gym interior with fitness equipment and high-end lighting, architectural photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANlfHp4q0skwjS1aPRhxW8w-eHxqaA073fm0K56RFHi3ufz3gLCM75xxDF-ivF0bTsklKrq-9AZ1uDAH2bPh1TtyFng0tU8n_YQEMbFjVgXSEMqyfJheffnoWUYZWaAuRXBrbe7EWDwqz0R3l5rLWOKCx4_6tHGnkRzuo2HHBy_dRrXjPbYG2qFb9Yd8iqJHl7VJGRh_Q9lR_bE-MAzvRL-dqfRRoYADe6Op7N6gElQLMPCM7P1Ce-KZQYMHd97D52_MyEzysT-OLR"/>
+<img class="rounded-[2rem] shadow-lg" data-alt="clean bright modern medical clinic reception area with minimalist furniture and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_k2NPjoRXEGqY0Q2TNzwCaxuZUthrzR0GmIEd1RuyV8bp-o1y8IFigkpinqZZkyD4Q_snksaml-4fbFbx11uutDn630KhrUqMisjrsqx-D7PRb2ErOh69Pggv3lMdUW436fF5I7HarO7ycy802m3oOU96_lp-oMBUvuZnvIP9P1puuvN42tOqHXL-vP9NIgCggZb7585UryEBrxStp2uWGcXgXGgpFMVTYBNHxHBvT6of36g0GAehn-wXJE-mHlLAiyFC-62qpv1U"/>
+</div>
+<div>
+<img class="rounded-[2rem] shadow-lg mb-4" data-alt="modern minimalist classroom with high-end designer furniture and natural light through large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeU11HTeVUvVH3jOSpf6uGd7F8MQPVzJkGncRWx3kpeXJt8B7kJoGoSKLTWij4YoGzW2L5-mGNki9y07WCNBZ6lrnZnpAEWoyHNlZF3GLlYaBJCcjg1gy8Np5ODJLOtv8KMnISb4k9U1Gkyfocv9Gy9JQ1sFr2eqK9tQFTpW4FSoI4l5naqQmmQyEjsTJPU_-wfJy6I_GJekatD53FVoveLMpTGusZSkGmUVrOuXkVw5K4El9DuY0nd9_uyxvNe0mMcJAQAkDAL8xF"/>
+<img class="rounded-[2rem] shadow-lg" data-alt="sleek professional meeting room with a glass table and ergonomic chairs in a high-rise office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmZD2MIZZAiMS1gfhEDj8UadgdJ8iYEhpGL0LeW8jwVhuq6CVEfw0MFCXbu8LhcL--5OOS4Ag_dxePUa6_CbMTk3uwGHqs99K8x9gikauYMwtuRScI3aPF12PWo-g5mtxtdP7Ze92j9UseVl-sI9RLvUuoh6BN-dDc2IPVOQGryGwC-KQmgWRxZLZgTm4CtjD1nWeFxoU0vbPMcOt8owa9aQhXpODRzlOw4gBBW1SUsxQa273p0r5qu4f4bIp0wLzHkr2cq4Rts0m1"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Teaser -->
+<section class="px-6 py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-4xl font-black font-headline tracking-tighter">Simple, <span class="text-primary">Transparent</span> Pricing.</h2>
+<p class="text-on-surface-variant">No hidden fees. Scale as you grow.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Tier 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col border border-transparent hover:border-primary/10 transition-all">
+<h4 class="text-xl font-bold mb-2">Starter</h4>
+<div class="text-4xl font-black mb-6">$49<span class="text-lg font-medium text-on-surface-variant">/mo</span></div>
+<ul class="space-y-4 mb-10 flex-1">
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Up to 50 Students</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Core Management Tools</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Basic Support</li>
+</ul>
+<button class="w-full py-4 rounded-xl border-2 border-outline-variant font-bold hover:bg-surface-container-low transition-all">Get Started</button>
+</div>
+<!-- Tier 2 - Featured -->
+<div class="bg-white p-8 rounded-[2rem] flex flex-col shadow-2xl relative border-2 border-primary scale-105 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Most Popular</div>
+<h4 class="text-xl font-bold mb-2">Professional</h4>
+<div class="text-4xl font-black mb-6">$129<span class="text-lg font-medium text-on-surface-variant">/mo</span></div>
+<ul class="space-y-4 mb-10 flex-1">
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Unlimited Students</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Advanced Analytics</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Automated Payments</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Priority Support</li>
+</ul>
+<button class="primary-gradient text-white w-full py-4 rounded-xl font-bold shadow-lg shadow-indigo-100 hover:shadow-indigo-200 active:scale-[0.98] transition-all">Start Free Trial</button>
+</div>
+<!-- Tier 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col border border-transparent hover:border-primary/10 transition-all">
+<h4 class="text-xl font-bold mb-2">Enterprise</h4>
+<div class="text-4xl font-black mb-6">Custom</div>
+<ul class="space-y-4 mb-10 flex-1">
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Multi-location Support</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> White-label Option</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Dedicated Manager</li>
+</ul>
+<button class="w-full py-4 rounded-xl border-2 border-outline-variant font-bold hover:bg-surface-container-low transition-all">Contact Sales</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 py-24">
+<div class="max-w-5xl mx-auto primary-gradient rounded-[3rem] p-12 lg:p-20 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[80px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+<div class="relative z-10 max-w-2xl mx-auto space-y-8">
+<h2 class="text-4xl lg:text-6xl font-black font-headline tracking-tighter leading-tight">Ready to transform your center?</h2>
+<p class="text-lg opacity-80">Join 500+ centers globally that trust CenterHub to curate their daily operations.</p>
+<div class="flex flex-wrap justify-center gap-4 pt-4">
+<button class="bg-white text-primary px-10 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all">Get Started for Free</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all">Watch Demo</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-surface text-white pt-24 pb-12 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="text-2xl font-black tracking-tighter text-white">CenterHub</div>
+<p class="text-slate-400 text-sm leading-relaxed">The architectural solution for modern institution management. Streamlined, scalable, and sophisticated.</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-white/10 cursor-pointer transition-all"><span class="material-symbols-outlined text-white text-lg">public</span></div>
+<div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-white/10 cursor-pointer transition-all"><span class="material-symbols-outlined text-white text-lg">chat</span></div>
+<div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-white/10 cursor-pointer transition-all"><span class="material-symbols-outlined text-white text-lg">alternate_email</span></div>
+</div>
+</div>
+<div class="space-y-6">
+<h5 class="text-white font-bold">Platform</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Features</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Pricing</a></li>
+<li><a class="hover:text-white transition-colors" href="#">API Docs</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Security</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-white font-bold">Solutions</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Tuition Centers</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Fitness Studios</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Clinics</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Enterprise</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-white font-bold">Company</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-xs">© 2024 CenterHub Inc. All rights reserved.</p>
+<div class="flex gap-8">
+<span class="text-slate-500 text-xs cursor-pointer hover:text-white">Terms of Service</span>
+<span class="text-slate-500 text-xs cursor-pointer hover:text-white">Cookie Policy</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Shell -->
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 md:hidden bg-white/80 backdrop-blur-md border-t border-slate-100/50 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)]">
+<a class="flex flex-col items-center justify-center bg-indigo-50 text-indigo-700 rounded-2xl px-4 py-2 scale-95 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="class">class</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Classes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Profile</span>
+</a>
+</div>
+</body></html>

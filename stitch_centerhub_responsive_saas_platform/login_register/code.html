@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CenterHub | Secure Authentication</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#e2dfff",
+                    "surface-container-high": "#dce9ff",
+                    "on-primary-fixed": "#0f0069",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "outline": "#777587",
+                    "secondary-container": "#d5e0f8",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-surface": "#0b1c30",
+                    "on-tertiary-fixed": "#001e2f",
+                    "tertiary": "#004d70",
+                    "surface-container": "#e5eeff",
+                    "surface-container-highest": "#d3e4fe",
+                    "tertiary-fixed-dim": "#89ceff",
+                    "on-secondary-container": "#586377",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#c9e6ff",
+                    "surface-dim": "#cbdbf5",
+                    "inverse-primary": "#c3c0ff",
+                    "on-surface-variant": "#464555",
+                    "on-tertiary-container": "#b8e0ff",
+                    "tertiary-container": "#006693",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary": "#3525cd",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "on-primary-container": "#dad7ff",
+                    "outline-variant": "#c7c4d8",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "secondary": "#545f73",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "surface-variant": "#d3e4fe",
+                    "primary-container": "#4f46e5",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "on-tertiary-fixed-variant": "#004c6e",
+                    "on-background": "#0b1c30",
+                    "background": "#f8f9ff",
+                    "secondary-fixed": "#d8e3fb",
+                    "surface": "#f8f9ff",
+                    "surface-tint": "#4d44e3",
+                    "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .btn-primary-gradient {
+            background: linear-gradient(135deg, #3525cd 0%, #4f46e5 100%);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+        }
+        .auth-container {
+            min-height: 100dvh;
+        }
+        /* Remove shell borders per Design System */
+        .no-border-shell {
+            border: none !important;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Focus Journey: Navigation Suppression Rule Applied (No Top/Bottom Nav) -->
+<main class="auth-container flex flex-col items-center justify-center p-4 md:p-8 relative overflow-hidden">
+<!-- Abstract Decorative Background Elements (The Architectural Curator Aesthetic) -->
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-surface-container-high opacity-40 blur-3xl -z-10"></div>
+<div class="absolute bottom-[-5%] right-[-5%] w-[30%] h-[30%] rounded-full bg-primary-fixed opacity-30 blur-3xl -z-10"></div>
+<!-- Brand Identity Section -->
+<div class="mb-10 text-center">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary-container text-white mb-4 shadow-xl shadow-primary/20">
+<span class="material-symbols-outlined text-4xl" data-icon="hub">hub</span>
+</div>
+<h1 class="font-headline font-extrabold text-3xl tracking-tighter text-on-surface">CenterHub</h1>
+<p class="text-on-surface-variant font-medium text-sm mt-1">Enterprise Management Platform</p>
+</div>
+<!-- Auth Card Stack -->
+<div class="w-full max-w-md space-y-8">
+<!-- Login Card -->
+<section class="bg-surface-container-lowest rounded-3xl p-8 md:p-10 shadow-[0_20px_50px_-12px_rgba(11,28,48,0.08)]">
+<header class="mb-8">
+<h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface">Welcome back</h2>
+<p class="text-on-surface-variant text-sm mt-2">Please enter your details to sign in.</p>
+</header>
+<form action="#" class="space-y-6" method="POST">
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="email">Email Address</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-xl border-none bg-surface-container-low text-on-surface placeholder:text-outline-variant focus:ring-4 focus:ring-primary/10 transition-all outline-none" id="email" name="email" placeholder="name@organization.com" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant" for="password">Password</label>
+<a class="text-xs font-semibold text-primary hover:text-primary-container transition-colors" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-xl border-none bg-surface-container-low text-on-surface placeholder:text-outline-variant focus:ring-4 focus:ring-primary/10 transition-all outline-none" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<button class="w-full h-12 btn-primary-gradient text-white font-bold rounded-full transition-all active:scale-[0.98] shadow-lg shadow-primary/30" type="submit">
+                        Sign In
+                    </button>
+</form>
+<div class="mt-8 pt-8 border-t border-surface-container-high text-center">
+<p class="text-on-surface-variant text-sm">
+                        Don't have a center yet? 
+                        <a class="text-primary font-bold hover:underline underline-offset-4 ml-1" href="#register">Create Center</a>
+</p>
+</div>
+</section>
+<!-- Registration Section (Appears as a separate visual intent) -->
+<section class="bg-surface-container-low/50 rounded-3xl p-8 md:p-10" id="register">
+<header class="mb-8">
+<h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface">Register Center</h2>
+<p class="text-on-surface-variant text-sm mt-2">Establish your organization on CenterHub.</p>
+</header>
+<form action="#" class="space-y-5" method="POST">
+<!-- Grid for Desktop, Single Column for Mobile (Mobile-First Mandate) -->
+<div class="grid grid-cols-1 gap-5">
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="center_name">Center Name</label>
+<input class="w-full h-12 px-4 rounded-xl border-none bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:ring-4 focus:ring-primary/10 transition-all outline-none" id="center_name" name="center_name" placeholder="Acme Learning Center" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="admin_name">Admin Name</label>
+<input class="w-full h-12 px-4 rounded-xl border-none bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:ring-4 focus:ring-primary/10 transition-all outline-none" id="admin_name" name="admin_name" placeholder="Alex Johnson" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="reg_email">Work Email</label>
+<input class="w-full h-12 px-4 rounded-xl border-none bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:ring-4 focus:ring-primary/10 transition-all outline-none" id="reg_email" name="reg_email" placeholder="admin@center.com" required="" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="phone">Phone Number</label>
+<input class="w-full h-12 px-4 rounded-xl border-none bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:ring-4 focus:ring-primary/10 transition-all outline-none" id="phone" name="phone" placeholder="+1 (555) 000-0000" required="" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="center_type">Center Type</label>
+<div class="relative">
+<select class="w-full h-12 px-4 rounded-xl border-none bg-surface-container-lowest text-on-surface appearance-none focus:ring-4 focus:ring-primary/10 transition-all outline-none cursor-pointer" id="center_type" name="center_type">
+<option disabled="" selected="" value="">Select industry</option>
+<option value="education">Education &amp; K12</option>
+<option value="fitness">Fitness &amp; Wellness</option>
+<option value="corporate">Corporate Training</option>
+<option value="creative">Creative Studios</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="reg_password">Security Password</label>
+<input class="w-full h-12 px-4 rounded-xl border-none bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:ring-4 focus:ring-primary/10 transition-all outline-none" id="reg_password" name="reg_password" placeholder="Create a secure password" required="" type="password"/>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full h-14 bg-on-surface text-white font-bold rounded-full transition-all active:scale-[0.98] shadow-xl" type="submit">
+                            Register Organization
+                        </button>
+<p class="text-center text-[10px] text-on-surface-variant mt-4 px-4 leading-relaxed">
+                            By clicking register, you agree to the CenterHub <a class="underline" href="#">Terms of Service</a> and <a class="underline" href="#">Privacy Policy</a>.
+                        </p>
+</div>
+</form>
+</section>
+</div>
+<!-- Support Footer -->
+<footer class="mt-12 mb-8 flex items-center gap-6 text-on-surface-variant text-sm font-medium">
+<a class="hover:text-primary transition-colors inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="contact_support">contact_support</span>
+                Support
+            </a>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<a class="hover:text-primary transition-colors inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="help">help</span>
+                Help Center
+            </a>
+</footer>
+</main>
+<!-- Decorative Bottom Gradient for Depth -->
+<div class="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-surface-container-low/50 to-transparent pointer-events-none -z-10"></div>
+</body></html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CenterHub - Pricing &amp; Plans</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#eff4ff",
+                        "surface-bright": "#f8f9ff",
+                        "primary-fixed": "#e2dfff",
+                        "surface-container-high": "#dce9ff",
+                        "on-primary-fixed": "#0f0069",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#213145",
+                        "outline": "#777587",
+                        "secondary-container": "#d5e0f8",
+                        "on-secondary-fixed": "#111c2d",
+                        "on-surface": "#0b1c30",
+                        "on-tertiary-fixed": "#001e2f",
+                        "tertiary": "#004d70",
+                        "surface-container": "#e5eeff",
+                        "surface-container-highest": "#d3e4fe",
+                        "tertiary-fixed-dim": "#89ceff",
+                        "on-secondary-container": "#586377",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#c9e6ff",
+                        "surface-dim": "#cbdbf5",
+                        "inverse-primary": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "on-tertiary-container": "#b8e0ff",
+                        "tertiary-container": "#006693",
+                        "inverse-on-surface": "#eaf1ff",
+                        "primary": "#3525cd",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-primary-container": "#dad7ff",
+                        "outline-variant": "#c7c4d8",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "secondary": "#545f73",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "surface-variant": "#d3e4fe",
+                        "primary-container": "#4f46e5",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "on-tertiary-fixed-variant": "#004c6e",
+                        "on-background": "#0b1c30",
+                        "background": "#f8f9ff",
+                        "secondary-fixed": "#d8e3fb",
+                        "surface": "#f8f9ff",
+                        "surface-tint": "#4d44e3",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-gradient {
+            background: linear-gradient(135deg, #3525cd 0%, #4f46e5 100%);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+        }
+        .ambient-shadow {
+            box-shadow: 0 20px 50px -12px rgba(11, 28, 48, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm dark:shadow-none flex justify-between items-center px-6 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black tracking-tighter text-indigo-600 font-headline">CenterHub</span>
+<div class="hidden md:flex gap-6">
+<a class="font-['Manrope'] font-semibold tracking-tight text-slate-600 hover:text-indigo-500 transition-colors" href="#">Platform</a>
+<a class="font-['Manrope'] font-semibold tracking-tight text-slate-600 hover:text-indigo-500 transition-colors" href="#">Solutions</a>
+<a class="font-['Manrope'] font-semibold tracking-tight text-slate-600 hover:text-indigo-500 transition-colors" href="#">Resources</a>
+<a class="font-['Manrope'] font-semibold tracking-tight text-indigo-600 border-b-2 border-indigo-600" href="#">Pricing</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-['Manrope'] font-semibold tracking-tight text-slate-600 hover:text-indigo-500 px-4 py-2">Log In</button>
+<button class="premium-gradient text-white font-['Manrope'] font-semibold tracking-tight px-6 py-2 rounded-full inner-glow">Start Free</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="pt-32 pb-16 px-6 text-center">
+<div class="max-w-4xl mx-auto">
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tighter text-on-surface mb-6">
+                Architect Your Learning <span class="text-primary">Ecosystem</span>
+</h1>
+<p class="font-body text-lg text-secondary max-w-2xl mx-auto">
+                Simple, transparent pricing for teams of all sizes. Choose the foundation that supports your educational growth.
+            </p>
+</div>
+</header>
+<!-- Pricing Comparison Section -->
+<main class="max-w-7xl mx-auto px-6 pb-24">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Starter Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 flex flex-col h-full border-2 border-transparent transition-all hover:translate-y-[-4px]">
+<div class="mb-8">
+<h3 class="font-headline text-xl font-bold mb-2">Starter</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-black font-headline">$49</span>
+<span class="text-secondary font-medium">/mo</span>
+</div>
+<p class="text-sm text-secondary mt-4">Essential tools for individual educators and small studios.</p>
+</div>
+<div class="space-y-4 mb-8 flex-grow">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span class="text-sm">Up to 50 Students</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span class="text-sm">Standard Dashboard</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span class="text-sm">Email Support</span>
+</div>
+<div class="flex items-center gap-3 text-outline opacity-50">
+<span class="material-symbols-outlined text-lg" data-icon="block">block</span>
+<span class="text-sm">Advanced Reporting</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-xl font-bold bg-surface-container-high text-primary hover:bg-surface-container transition-colors">Choose Plan</button>
+</div>
+<!-- Pro Card (Featured) -->
+<div class="bg-surface-container-lowest rounded-xl p-8 flex flex-col h-full border-2 border-primary ambient-shadow relative overflow-hidden transition-all hover:translate-y-[-4px]">
+<div class="absolute top-0 right-0 px-4 py-1 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest rounded-bl-xl">Popular</div>
+<div class="mb-8">
+<h3 class="font-headline text-xl font-bold mb-2">Pro</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-black font-headline">$99</span>
+<span class="text-secondary font-medium">/mo</span>
+</div>
+<p class="text-sm text-secondary mt-4">Full power for growing centers requiring advanced insights.</p>
+</div>
+<div class="space-y-4 mb-8 flex-grow">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-semibold">Up to 500 Students</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Custom Dashboard Layouts</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Advanced Analytics &amp; Export</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Priority Support</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-xl font-bold premium-gradient text-white inner-glow">Choose Plan</button>
+</div>
+<!-- Enterprise Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 flex flex-col h-full border-2 border-transparent transition-all hover:translate-y-[-4px]">
+<div class="mb-8">
+<h3 class="font-headline text-xl font-bold mb-2">Enterprise</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-black font-headline">Custom</span>
+</div>
+<p class="text-sm text-secondary mt-4">Scalable infrastructure for large franchises and institutions.</p>
+</div>
+<div class="space-y-4 mb-8 flex-grow">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="verified">verified</span>
+<span class="text-sm font-semibold">Unlimited Students</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="hub">hub</span>
+<span class="text-sm">Multi-Tenancy Architecture</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="security">security</span>
+<span class="text-sm">SSO &amp; Custom Security</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="support_agent">support_agent</span>
+<span class="text-sm">Dedicated Account Manager</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-xl font-bold bg-on-surface text-white hover:opacity-90 transition-opacity">Choose Plan</button>
+</div>
+</div>
+<!-- FAQ Section -->
+<section class="mt-32 max-w-4xl mx-auto">
+<h2 class="font-headline text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+<div class="space-y-6">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-container-low rounded-xl p-6">
+<h4 class="font-bold text-lg mb-2">Can we migrate existing student data?</h4>
+<p class="text-secondary text-sm leading-relaxed">Absolutely. We provide automated CSV and JSON import tools. For Enterprise clients, our white-glove migration team handles the entire transition to ensure zero downtime.</p>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-container-low rounded-xl p-6">
+<h4 class="font-bold text-lg mb-2">How does Multi-Tenancy work in CenterHub?</h4>
+<p class="text-secondary text-sm leading-relaxed">Our Enterprise architecture allows you to manage multiple centers or franchises from a single master dashboard while maintaining strict data isolation between individual branches.</p>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-container-low rounded-xl p-6">
+<h4 class="font-bold text-lg mb-2">Is there a discount for non-profits?</h4>
+<p class="text-secondary text-sm leading-relaxed">Yes, we offer a 20% discount for registered non-profit educational institutions. Please contact our support team with your credentials to apply the discount.</p>
+</div>
+</div>
+</section>
+<!-- Trust Section (Bento Style) -->
+<section class="mt-32">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[120px]">
+<div class="md:col-span-2 md:row-span-2 bg-primary-container rounded-xl p-8 flex flex-col justify-end relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 group-hover:scale-105 transition-transform duration-500" data-alt="collaborative team of educators working together in a bright modern workspace with natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnnVwMmLnVbkE7gu4mlidrkfGRv3K_XR04xBdUuSbCC6XRNONDeYhzMH_Z-NAnKImwGdewK8ff3VQJ-GDLb9YKnfHqib80P4I39NdU7btCt15W6x7TmZV5rF7N_P9TDHgUWrH4aozrQxDqiatMta2K9olHRbCS6z2iwrcBU7niIEo22anhadMPQH9xZnww_GmZ7TtaPJnWFty23aY1KMtQDfO504emVuYrBNknTqGX03--U6sgjE7ojmgSK8HYwNribIVB79TOzxZ5"/>
+<h3 class="text-white font-headline text-3xl font-bold relative z-10">Trusted by 2,000+ Centers</h3>
+<p class="text-white/80 relative z-10 mt-2">Join the global community of elite educators.</p>
+</div>
+<div class="md:col-span-1 md:row-span-1 bg-surface-container-highest rounded-xl flex items-center justify-center p-4">
+<div class="text-center">
+<div class="text-2xl font-black text-primary">99.9%</div>
+<div class="text-[10px] uppercase tracking-widest font-bold text-secondary">Uptime</div>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-1 bg-surface-container-high rounded-xl flex items-center justify-center p-4">
+<div class="text-center">
+<div class="text-2xl font-black text-primary">24/7</div>
+<div class="text-[10px] uppercase tracking-widest font-bold text-secondary">Support</div>
+</div>
+</div>
+<div class="md:col-span-2 md:row-span-1 bg-white rounded-xl p-6 ambient-shadow border border-slate-100 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="professional woman portrait with warm smile and confident posture in educational setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW3tI35Q_u7HPBahNj16iGiwI-Ihq-VBAzD5REgjsfVyXy53ZUOC6rXg8rga3hm5dshPng5n-8z4XIHkaEsAz2Z3BHDS2XCxlSSWC7w3CUElF8Ednmm1jpFgadTgG4r9Tbb7Au2tAop_X9FXmJ0q61e4EK1ok7a_64wM_Pav88ny1FlKCPF5y6T2TAzPUlveNAM42-mHu3hwyMI83VPfP7XPqE11qyyvB_ub2mfeXovkY3BDkWpBniOHYMnkmxvqNWZrR8sxYumJOP"/>
+</div>
+<div>
+<p class="italic text-sm text-on-surface">"CenterHub transformed how we handle our curriculum and student tracking. The ROI was immediate."</p>
+<p class="text-[10px] font-bold mt-1 text-primary">DR. SARAH CHEN, DIRECTOR AT EDUGROW</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Meta -->
+<footer class="bg-surface-container-lowest py-16 px-6 border-t border-slate-100">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs">
+<span class="text-2xl font-black tracking-tighter text-indigo-600 font-headline">CenterHub</span>
+<p class="mt-4 text-sm text-secondary leading-relaxed">
+                    The architectural foundation for modern education. Scalable, secure, and designed for growth.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div>
+<h5 class="font-bold text-sm mb-4">Product</h5>
+<ul class="space-y-2 text-sm text-secondary">
+<li><a class="hover:text-primary transition-colors" href="#">Features</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Integrations</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Enterprise</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-sm mb-4">Company</h5>
+<ul class="space-y-2 text-sm text-secondary">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-sm mb-4">Legal</h5>
+<ul class="space-y-2 text-sm text-secondary">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Security</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-50 flex justify-between items-center text-xs text-outline">
+<p>© 2024 CenterHub Enterprise. All rights reserved.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-lg" data-icon="language">language</span>
+<span>English (US)</span>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 md:hidden bg-white/80 backdrop-blur-md border-t border-slate-100/50 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)] rounded-t-[2rem]">
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50">
+<span class="material-symbols-outlined" data-icon="class">class</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">Classes</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">Inbox</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-indigo-50 text-indigo-700 rounded-2xl px-4 py-2">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</div>
+</nav>
+</body></html>

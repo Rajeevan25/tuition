@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CenterHub | Settings &amp; Profiles</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#e2dfff",
+                    "surface-container-high": "#dce9ff",
+                    "on-primary-fixed": "#0f0069",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "outline": "#777587",
+                    "secondary-container": "#d5e0f8",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-surface": "#0b1c30",
+                    "on-tertiary-fixed": "#001e2f",
+                    "tertiary": "#004d70",
+                    "surface-container": "#e5eeff",
+                    "surface-container-highest": "#d3e4fe",
+                    "tertiary-fixed-dim": "#89ceff",
+                    "on-secondary-container": "#586377",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#c9e6ff",
+                    "surface-dim": "#cbdbf5",
+                    "inverse-primary": "#c3c0ff",
+                    "on-surface-variant": "#464555",
+                    "on-tertiary-container": "#b8e0ff",
+                    "tertiary-container": "#006693",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary": "#3525cd",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "on-primary-container": "#dad7ff",
+                    "outline-variant": "#c7c4d8",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "secondary": "#545f73",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "surface-variant": "#d3e4fe",
+                    "primary-container": "#4f46e5",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "on-tertiary-fixed-variant": "#004c6e",
+                    "on-background": "#0b1c30",
+                    "background": "#f8f9ff",
+                    "secondary-fixed": "#d8e3fb",
+                    "surface": "#f8f9ff",
+                    "surface-tint": "#4d44e3",
+                    "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #3525cd 0%, #4f46e5 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Desktop Side Navigation (SideNavBar JSON implementation) -->
+<aside class="h-screen w-64 hidden md:flex flex-col border-r-0 fixed left-0 top-0 p-4 overflow-y-auto bg-slate-50 z-50">
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-10 h-10 primary-gradient rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-slate-900 font-headline tracking-tighter">CenterHub</h1>
+<p class="text-[10px] uppercase tracking-widest font-bold text-slate-500">Enterprise Admin</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 hover:bg-slate-200/50 rounded-lg transition-transform active:scale-[0.99] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 hover:bg-slate-200/50 rounded-lg transition-transform active:scale-[0.99] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+                Classes
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 hover:bg-slate-200/50 rounded-lg transition-transform active:scale-[0.99] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+                Students
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 hover:bg-slate-200/50 rounded-lg transition-transform active:scale-[0.99] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                Curriculum
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 hover:bg-slate-200/50 rounded-lg transition-transform active:scale-[0.99] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                Analytics
+            </a>
+<!-- Active State for Settings -->
+<a class="flex items-center gap-3 px-3 py-2 bg-white text-indigo-600 shadow-sm rounded-lg font-bold text-sm transition-transform active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto pt-4 border-t border-slate-200 space-y-1">
+<button class="w-full primary-gradient text-white rounded-full py-2.5 px-4 font-bold text-sm shadow-md mb-4 hover:opacity-90 transition-opacity">
+                New Project
+            </button>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 hover:bg-slate-200/50 rounded-lg font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+                Support
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 hover:bg-slate-200/50 rounded-lg font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                Help
+            </a>
+</div>
+</aside>
+<!-- Main Canvas Area -->
+<main class="md:ml-64 min-h-screen pb-24 md:pb-8">
+<!-- Top Navigation (TopNavBar JSON implementation) -->
+<header class="fixed top-0 right-0 left-0 md:left-64 z-40 bg-white/70 backdrop-blur-xl px-6 py-4 flex justify-between items-center shadow-sm">
+<div class="flex items-center gap-4">
+<h2 class="text-xl font-bold font-headline text-on-surface tracking-tight">Organization Settings</h2>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden lg:flex items-center gap-6 font-['Manrope'] font-semibold tracking-tight text-slate-600">
+<a class="hover:text-indigo-500 transition-colors" href="#">Platform</a>
+<a class="hover:text-indigo-500 transition-colors" href="#">Solutions</a>
+<a class="hover:text-indigo-500 transition-colors" href="#">Resources</a>
+<a class="hover:text-indigo-500 transition-colors" href="#">Pricing</a>
+</nav>
+<div class="h-8 w-[1px] bg-outline-variant/30 hidden lg:block"></div>
+<div class="flex items-center gap-3">
+<button class="text-slate-600 font-semibold hover:text-indigo-500 transition-colors">Log In</button>
+<button class="bg-indigo-600 text-white px-5 py-2 rounded-full font-bold shadow-sm hover:opacity-80 duration-200">Start Free</button>
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover border-2 border-primary-container/20" data-alt="Close up portrait of a smiling professional man in a clean studio setting with soft daylighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCgs7AAp5xwRDRJp3XVbQPsz8MHQdfD2YnKpHckXRJfcPkpjg012psFt7_A10EiJxnkb1fcM13_9Lka5R-xtWDJ8pZ0q7UZ6Ga2ILFdZb1zTknOENYJCN7E587FDz0Dm_AIphFzB5Z8_lnEJepZQ7STdokNc7PNgJbJdzh4QZnYlRKBVmH3GQZ2vITyJxYwM0ifVr_rR570Iy_BdUF_zv8DaZxk-V9eM6Z-iDBywQiaZi9BYJdFSVA8NpBqCEKmjpk-vacYfiRk-_w"/>
+</div>
+</div>
+</header>
+<div class="mt-24 px-6 max-w-6xl mx-auto">
+<!-- Settings Dashboard Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-12">
+<!-- Center Profile Navigation -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-3xl p-8 shadow-sm transition-transform hover:scale-[1.01] flex flex-col justify-between group overflow-hidden relative">
+<div class="absolute -right-8 -top-8 w-48 h-48 bg-primary/5 rounded-full group-hover:scale-125 transition-transform duration-500"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<div class="p-3 bg-primary-fixed rounded-2xl text-primary">
+<span class="material-symbols-outlined" data-icon="business">business</span>
+</div>
+<h3 class="text-2xl font-bold font-headline">Center Profile</h3>
+</div>
+<p class="text-on-surface-variant max-w-md mb-8">Manage your center's physical location, contact information, and core operational hours for scheduling.</p>
+<div class="flex flex-wrap gap-4">
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-sm font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                San Francisco HQ
+                            </span>
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-sm font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                                08:00 - 18:00
+                            </span>
+</div>
+</div>
+<button class="mt-8 self-start flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+                        Edit Details
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Fee Settings Small Card -->
+<div class="md:col-span-4 bg-surface-container-low rounded-3xl p-8 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex flex-col gap-4">
+<div class="p-3 bg-tertiary-container rounded-2xl text-on-tertiary-container w-fit">
+<span class="material-symbols-outlined" data-icon="payments" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<h3 class="text-xl font-bold font-headline">Fee Settings</h3>
+<p class="text-sm text-on-surface-variant">Configure automatic billing, late fees, and discount tiers.</p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/20 flex justify-between items-center">
+<span class="text-2xl font-black text-on-surface font-headline">$1,240<span class="text-xs text-on-surface-variant font-normal"> / avg mo</span></span>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- User Management Section -->
+<div class="md:col-span-12 bg-surface-container-lowest rounded-3xl p-8 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<h3 class="text-2xl font-bold font-headline">User Management</h3>
+<p class="text-on-surface-variant text-sm mt-1">Manage administrative access and teacher roles across the platform.</p>
+</div>
+<button class="primary-gradient text-white px-6 py-2.5 rounded-full font-bold shadow-md flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+                            Invite Staff
+                        </button>
+</div>
+<div class="overflow-x-auto">
+<div class="min-w-[600px] flex flex-col gap-2">
+<!-- Staff Row 1 -->
+<div class="flex items-center justify-between p-4 bg-surface rounded-2xl hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4 flex-1">
+<img alt="Staff member" class="w-12 h-12 rounded-xl object-cover" data-alt="Professional headshot of a woman with a friendly expression, soft lighting, modern corporate aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZIwtA61c8yrjbzwCXx42MMjujijxe9x6hwXqwIonySLlwL_DjHKHFj2DL4R23wkZzKoPB6RB4t9RBXs853UgxdepqjvQVlDo7lr82Hdac7a66jm4el1veExJ86ZTsQP8340W-TuUKZB3U-v6QX8r694lWEiznEjB4Gz3gY8IvfMn7iMxix3VGpI3-ltGrTyV2H-VJfGcF3XVh8XPJ-yG7oeVrqfFel85TsX9wwL5kVS3uiwBvuhVenqMBHBKNiVoGRaYDFVhXg2Iu"/>
+<div>
+<h4 class="font-bold text-on-surface">Elena Rodriguez</h4>
+<p class="text-xs text-on-surface-variant">elena.r@centerhub.edu</p>
+</div>
+</div>
+<div class="flex-1 flex justify-center">
+<span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full uppercase tracking-wider">Super Admin</span>
+</div>
+<div class="flex items-center gap-3 flex-1 justify-end">
+<span class="text-xs text-emerald-600 font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                                        Active
+                                    </span>
+<button class="p-2 text-outline opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Staff Row 2 -->
+<div class="flex items-center justify-between p-4 bg-surface rounded-2xl hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4 flex-1">
+<img alt="Staff member" class="w-12 h-12 rounded-xl object-cover" data-alt="Smiling man with glasses in business casual attire, natural outdoor light background with soft bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCihAseEA7-VYo3G4krkM4T-Y9ceQH62hjHIoT_SkwVOAmsqpacerhluFcEsPLk_KYLN8Arh6VJCR-C3kBjN2Hz9tb9gM2MPuJ3X_4Abwn8RRfY5IJC0ioIV-biejWdfNo3gBXzfAl5NW4crStOAZbfLRUjGLmGgoDFrQdfR_byFTvk1aHZTvg7Me7Dnmv6dqr1hEEJiyXkvkfiez4YVSQm344BAXWb58HyvolXiYmxCGfDqnzSLp9k-7F4OOcU_QetJXSG1WqiGKR_"/>
+<div>
+<h4 class="font-bold text-on-surface">Marcus Thorne</h4>
+<p class="text-xs text-on-surface-variant">m.thorne@centerhub.edu</p>
+</div>
+</div>
+<div class="flex-1 flex justify-center">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-fixed-variant text-xs font-bold rounded-full uppercase tracking-wider">Teacher</span>
+</div>
+<div class="flex items-center gap-3 flex-1 justify-end">
+<span class="text-xs text-emerald-600 font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                                        Active
+                                    </span>
+<button class="p-2 text-outline opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Staff Row 3 -->
+<div class="flex items-center justify-between p-4 bg-surface rounded-2xl hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4 flex-1">
+<img alt="Staff member" class="w-12 h-12 rounded-xl object-cover" data-alt="Young male professional looking directly at camera, soft studio light, minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIZdkOZJ-uCbYf7VYGPLzhEmd8J-F4s_5ZmaxypyBIr_ZchDYk6slEt_VjeB9K8ykx9KxAbL7jj2mgbVtameS2wSd_hYvpCLHo1axuHZ_haCtybM5nvCbp7PntDeDadGnPJMpE-ytSCP5ofvkPmKNfEeFlwNHpe4hlbFTcpcqmQKw3TMjBeEda7OvKqKJC8BZty9cOo_E6W-FL_4yjKHGwdO4SIij36PGao3QTFJ-Of4LpnH9Wwr6teOuDB_PpuAuRuGdtJqOM-Eh5"/>
+<div>
+<h4 class="font-bold text-on-surface">Julian Vane</h4>
+<p class="text-xs text-on-surface-variant">j.vane@centerhub.edu</p>
+</div>
+</div>
+<div class="flex-1 flex justify-center">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-bold rounded-full uppercase tracking-wider">Billing Clerk</span>
+</div>
+<div class="flex items-center gap-3 flex-1 justify-end">
+<span class="text-xs text-outline font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                                        On Leave
+                                    </span>
+<button class="p-2 text-outline opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Branding Section -->
+<div class="md:col-span-12 bg-surface-container-low rounded-3xl p-8 overflow-hidden relative">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+<div>
+<h3 class="text-2xl font-bold font-headline mb-2">Center Branding</h3>
+<p class="text-on-surface-variant mb-8">Customize how your center appears to parents and students in their portals.</p>
+<div class="space-y-8">
+<div>
+<label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant block mb-4">Primary Brand Color</label>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-2xl bg-indigo-600 shadow-lg shadow-indigo-200 cursor-pointer"></div>
+<div class="flex flex-col gap-1">
+<span class="font-mono text-sm font-bold">#3525CD</span>
+<span class="text-xs text-on-surface-variant">Indigo Primary</span>
+</div>
+<div class="flex gap-2 ml-4">
+<div class="w-8 h-8 rounded-full bg-[#f43f5e] cursor-pointer hover:scale-110 transition-transform"></div>
+<div class="w-8 h-8 rounded-full bg-[#10b981] cursor-pointer hover:scale-110 transition-transform"></div>
+<div class="w-8 h-8 rounded-full bg-[#f59e0b] cursor-pointer hover:scale-110 transition-transform"></div>
+<div class="w-8 h-8 rounded-full bg-[#8b5cf6] cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+</div>
+</div>
+<div>
+<label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant block mb-4">Logo Upload</label>
+<div class="border-2 border-dashed border-outline-variant rounded-3xl p-12 flex flex-col items-center justify-center text-center bg-surface-container-lowest hover:border-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-primary transition-colors mb-4" data-icon="cloud_upload">cloud_upload</span>
+<p class="font-bold">Drop your logo here</p>
+<p class="text-xs text-on-surface-variant mt-1">PNG or SVG, max 5MB. Recommended size 400x400px.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Branding Preview Mobile Card -->
+<div class="relative flex justify-center">
+<div class="w-[300px] h-[550px] bg-slate-900 rounded-[3rem] p-3 shadow-2xl border-[8px] border-slate-800 relative overflow-hidden">
+<div class="w-24 h-6 bg-slate-800 absolute top-0 left-1/2 -translate-x-1/2 rounded-b-2xl z-20"></div>
+<div class="bg-surface h-full rounded-[2rem] overflow-hidden flex flex-col">
+<div class="bg-indigo-600 h-24 w-full p-6 flex flex-col justify-end">
+<div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-indigo-600 text-sm" data-icon="hub">hub</span>
+</div>
+</div>
+<div class="p-4 space-y-4">
+<div class="h-6 w-3/4 bg-slate-200 rounded-md"></div>
+<div class="grid grid-cols-2 gap-3">
+<div class="h-20 bg-indigo-50 rounded-xl"></div>
+<div class="h-20 bg-slate-100 rounded-xl"></div>
+</div>
+<div class="space-y-2">
+<div class="h-3 w-full bg-slate-100 rounded"></div>
+<div class="h-3 w-full bg-slate-100 rounded"></div>
+<div class="h-3 w-2/3 bg-slate-100 rounded"></div>
+</div>
+<div class="h-10 w-full bg-indigo-600 rounded-full mt-4"></div>
+</div>
+</div>
+</div>
+<!-- Floating Decorative Badge -->
+<div class="absolute -bottom-4 -right-4 glass-panel p-4 rounded-2xl shadow-xl border border-white/50 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-tighter opacity-50">Preview Mode</p>
+<p class="font-bold text-sm">Real-time update</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only - BottomNavBar JSON implementation) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 backdrop-blur-md md:hidden rounded-t-[2rem] border-t border-slate-100/50 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)]">
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50 transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50 transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="class">class</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">Classes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50 transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="mail">mail</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-indigo-50 text-indigo-700 rounded-2xl px-4 py-2 transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CenterHub - Teacher Management</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#e2dfff",
+                    "surface-container-high": "#dce9ff",
+                    "on-primary-fixed": "#0f0069",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "outline": "#777587",
+                    "secondary-container": "#d5e0f8",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-surface": "#0b1c30",
+                    "on-tertiary-fixed": "#001e2f",
+                    "tertiary": "#004d70",
+                    "surface-container": "#e5eeff",
+                    "surface-container-highest": "#d3e4fe",
+                    "tertiary-fixed-dim": "#89ceff",
+                    "on-secondary-container": "#586377",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#c9e6ff",
+                    "surface-dim": "#cbdbf5",
+                    "inverse-primary": "#c3c0ff",
+                    "on-surface-variant": "#464555",
+                    "on-tertiary-container": "#b8e0ff",
+                    "tertiary-container": "#006693",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary": "#3525cd",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "on-primary-container": "#dad7ff",
+                    "outline-variant": "#c7c4d8",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "secondary": "#545f73",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "surface-variant": "#d3e4fe",
+                    "primary-container": "#4f46e5",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "on-tertiary-fixed-variant": "#004c6e",
+                    "on-background": "#0b1c30",
+                    "background": "#f8f9ff",
+                    "secondary-fixed": "#d8e3fb",
+                    "surface": "#f8f9ff",
+                    "surface-tint": "#4d44e3",
+                    "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm flex justify-between items-center px-6 py-4 max-w-full mx-auto">
+<div class="text-2xl font-black tracking-tighter text-indigo-600">CenterHub</div>
+<div class="hidden md:flex items-center space-x-8 font-['Manrope'] font-semibold tracking-tight text-slate-600">
+<a class="hover:text-indigo-500 transition-colors" href="#">Platform</a>
+<a class="hover:text-indigo-500 transition-colors" href="#">Solutions</a>
+<a class="hover:text-indigo-500 transition-colors" href="#">Resources</a>
+<a class="hover:text-indigo-500 transition-colors" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 font-semibold px-4 py-2 hover:text-indigo-500 transition-colors">Log In</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold shadow-lg shadow-indigo-200/50 hover:opacity-80 duration-200">Start Free</button>
+</div>
+</nav>
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full p-4 overflow-y-auto h-screen w-64 hidden md:flex flex-col bg-slate-50 border-r-0 z-40 pt-24">
+<div class="flex items-center gap-3 mb-8 px-2">
+<div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+</div>
+<div>
+<p class="text-xl font-bold text-slate-900">CenterHub</p>
+<p class="text-xs font-medium text-slate-500">Enterprise Admin</p>
+</div>
+</div>
+<nav class="space-y-1 flex-grow">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200/50 rounded-lg transition-transform active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-indigo-600 shadow-sm rounded-lg font-bold transition-transform active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-medium text-sm">Classes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200/50 rounded-lg transition-transform active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-medium text-sm">Students</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200/50 rounded-lg transition-transform active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-medium text-sm">Curriculum</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200/50 rounded-lg transition-transform active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-medium text-sm">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200/50 rounded-lg transition-transform active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-medium text-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1 pt-4 border-t border-slate-200">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:bg-slate-200/50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-medium text-sm">Support</span>
+</a>
+<button class="w-full mt-4 bg-indigo-50 text-indigo-700 font-bold py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-indigo-100 transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                New Project
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-24 pb-24 md:pb-12 px-4 md:px-8">
+<div class="max-w-6xl mx-auto space-y-8">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface">Teacher Profile</h1>
+<p class="text-secondary mt-1 font-medium">Manage faculty details and academic scheduling</p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 bg-surface-container-high text-on-surface-variant font-semibold rounded-full hover:bg-surface-container-highest transition-colors">Export Data</button>
+<button class="px-6 py-2.5 bg-primary text-on-primary font-bold rounded-full shadow-xl shadow-primary/20 hover:opacity-90 transition-opacity">Edit Profile</button>
+</div>
+</div>
+<!-- Bento Layout Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left Column: Profile Card -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Identity Card -->
+<div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm">
+<div class="flex flex-col items-center text-center">
+<div class="relative group">
+<img class="w-32 h-32 rounded-3xl object-cover shadow-2xl shadow-indigo-100 ring-4 ring-white" data-alt="professional headshot of a female educator with a warm smile in a brightly lit modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXhVMWeRe0Vkst57vyJUiu0kroW-5JBi_Pz8f7gAaEC9ogaO8oeHhVI9DiaQaG2c4sdThYxuFXUAPkLaN5JNO86MOEumSNtMo_K9_t0krotyJEM53qta4mCAKwXodbE3omb0eEHhgQepJM3NUljIAbyHX9ogesh1SzqpWZtWc05eiuYaR-yYYe7bRIyHz1v7UQNt65z7X_8OT8Y9fV0wfVvQRwc05zHJ64H3Mx1ZkQedncb4kgTVhlEwiyfESbdcwZ3VVSk9nGkIAN"/>
+<div class="absolute -bottom-2 -right-2 w-10 h-10 bg-emerald-500 border-4 border-white rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+</div>
+</div>
+<h2 class="mt-6 text-2xl font-bold text-on-surface">Dr. Elena Rodriguez</h2>
+<p class="text-primary font-semibold tracking-wide label-sm mt-1 uppercase">Senior Physics Lead</p>
+<div class="mt-6 w-full flex justify-between border-t border-surface-container pt-6">
+<div class="text-center flex-1 border-r border-surface-container">
+<p class="text-xl font-bold">12</p>
+<p class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Classes</p>
+</div>
+<div class="text-center flex-1 border-r border-surface-container">
+<p class="text-xl font-bold">280</p>
+<p class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Students</p>
+</div>
+<div class="text-center flex-1">
+<p class="text-xl font-bold">4.9</p>
+<p class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Rating</p>
+</div>
+</div>
+<div class="mt-8 w-full space-y-4 text-left">
+<div class="flex items-center gap-4 p-3 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-indigo-500" data-icon="mail">mail</span>
+<span class="text-sm font-medium">e.rodriguez@centerhub.edu</span>
+</div>
+<div class="flex items-center gap-4 p-3 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-indigo-500" data-icon="call">call</span>
+<span class="text-sm font-medium">+1 (555) 902-3412</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bio Section -->
+<div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="article">article</span>
+                            Professional Bio
+                        </h3>
+<p class="text-secondary leading-relaxed text-sm">
+                            Dr. Rodriguez has over 15 years of experience in theoretical physics and curriculum design. She specializes in quantum mechanics and has published multiple papers on educational reform in STEM fields. Passionate about interactive learning models.
+                        </p>
+</div>
+</div>
+<!-- Right Column: Schedule & Classes -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Weekly Schedule Grid -->
+<div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm overflow-hidden">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_month">calendar_month</span>
+                                Weekly Schedule
+                            </h3>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span></button>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-5 gap-2 md:gap-4 min-w-[500px]">
+<!-- Days Header -->
+<div class="text-center p-3 text-xs font-bold text-slate-400 uppercase tracking-widest">Mon</div>
+<div class="text-center p-3 text-xs font-bold text-slate-400 uppercase tracking-widest">Tue</div>
+<div class="text-center p-3 text-xs font-bold text-slate-400 uppercase tracking-widest">Wed</div>
+<div class="text-center p-3 text-xs font-bold text-slate-400 uppercase tracking-widest">Thu</div>
+<div class="text-center p-3 text-xs font-bold text-slate-400 uppercase tracking-widest">Fri</div>
+<!-- Schedule Slots (Illustrative) -->
+<div class="h-24 bg-primary-container/10 border-l-4 border-primary p-3 rounded-xl">
+<p class="text-[10px] font-bold text-primary">09:00 - 10:30</p>
+<p class="text-xs font-bold mt-1">AP Physics</p>
+</div>
+<div class="h-24 bg-surface-container-low rounded-xl"></div>
+<div class="h-24 bg-primary-container/10 border-l-4 border-primary p-3 rounded-xl">
+<p class="text-[10px] font-bold text-primary">09:00 - 10:30</p>
+<p class="text-xs font-bold mt-1">AP Physics</p>
+</div>
+<div class="h-24 bg-surface-container-low rounded-xl"></div>
+<div class="h-24 bg-tertiary-container/10 border-l-4 border-tertiary p-3 rounded-xl">
+<p class="text-[10px] font-bold text-tertiary">09:00 - 11:00</p>
+<p class="text-xs font-bold mt-1">Lab Session</p>
+</div>
+<div class="h-24 bg-surface-container-low rounded-xl"></div>
+<div class="h-24 bg-secondary-container/20 border-l-4 border-secondary p-3 rounded-xl">
+<p class="text-[10px] font-bold text-secondary">11:00 - 12:30</p>
+<p class="text-xs font-bold mt-1">Dept Meeting</p>
+</div>
+<div class="h-24 bg-surface-container-low rounded-xl"></div>
+<div class="h-24 bg-primary-container/10 border-l-4 border-primary p-3 rounded-xl">
+<p class="text-[10px] font-bold text-primary">11:00 - 12:30</p>
+<p class="text-xs font-bold mt-1">Honors Phys</p>
+</div>
+<div class="h-24 bg-surface-container-low rounded-xl"></div>
+</div>
+</div>
+<!-- Assigned Classes -->
+<div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="lists">lists</span>
+                                Assigned Classes
+                            </h3>
+<span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Spring Semester 2024</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="atom">atm</span>
+</div>
+<div>
+<p class="font-bold">AP Physics 101</p>
+<p class="text-xs text-slate-500">Block A • Room 302</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="functions">functions</span>
+</div>
+<div>
+<p class="font-bold">Quantum Mechanics</p>
+<p class="text-xs text-slate-500">Block C • Room 104</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Add New Teacher Form Section -->
+<div class="mt-12 bg-surface-container-low rounded-3xl p-8 md:p-12 border border-white/50">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-10">
+<span class="px-4 py-1.5 bg-indigo-600 text-white text-[10px] font-bold tracking-widest uppercase rounded-full">Onboarding</span>
+<h2 class="text-3xl font-extrabold mt-4 text-on-surface">Add New Faculty Member</h2>
+<p class="text-secondary mt-2">Initialize access and academic credentials for new staff</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2">Full Name</label>
+<input class="w-full px-4 py-3 bg-white border-0 ring-1 ring-outline-variant/30 rounded-xl focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all" placeholder="e.g. Marcus Thorne" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2">Email Address</label>
+<input class="w-full px-4 py-3 bg-white border-0 ring-1 ring-outline-variant/30 rounded-xl focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all" placeholder="m.thorne@centerhub.edu" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2">Phone Number</label>
+<input class="w-full px-4 py-3 bg-white border-0 ring-1 ring-outline-variant/30 rounded-xl focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all" placeholder="+1 (000) 000-0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2">Specialization</label>
+<select class="w-full px-4 py-3 bg-white border-0 ring-1 ring-outline-variant/30 rounded-xl focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all appearance-none">
+<option>Theoretical Mathematics</option>
+<option>Biological Sciences</option>
+<option>History &amp; Humanities</option>
+<option>Computer Science</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2">Primary Subject</label>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-primary text-white text-xs font-bold rounded-full cursor-pointer">Calculus</span>
+<span class="px-4 py-2 bg-white text-slate-500 text-xs font-bold rounded-full cursor-pointer ring-1 ring-slate-200">Geometry</span>
+<span class="px-4 py-2 bg-white text-slate-500 text-xs font-bold rounded-full cursor-pointer ring-1 ring-slate-200">Algebra</span>
+<button class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400"><span class="material-symbols-outlined text-sm" data-icon="add">add</span></button>
+</div>
+</div>
+<div class="pt-2">
+<label class="flex items-center justify-between cursor-pointer p-4 bg-white/50 rounded-2xl ring-1 ring-outline-variant/10">
+<div>
+<span class="block text-sm font-bold text-on-surface">Teacher Portal Access</span>
+<span class="text-xs text-slate-500">Enable automatic credentials generation</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+</div>
+</div>
+<div class="md:col-span-2 flex justify-end gap-4 mt-4">
+<button class="px-8 py-3 text-slate-500 font-bold" type="button">Discard Changes</button>
+<button class="px-10 py-3 bg-primary text-on-primary font-bold rounded-2xl shadow-xl shadow-indigo-200 hover:scale-[1.02] transition-transform" type="submit">
+                                Create Faculty Member
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Shared Component) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 backdrop-blur-md md:hidden rounded-t-[2rem] shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)] border-t border-slate-100/50">
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-2">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-indigo-50 text-indigo-700 rounded-2xl px-4 py-2">
+<span class="material-symbols-outlined" data-icon="class">class</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Classes</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-2">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Inbox</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-2">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">Profile</span>
+</div>
+</nav>
+</body></html>
