@@ -70,7 +70,7 @@ export default function ResourcesPage() {
                      readTime: "8 min read"
                    },
                    { 
-                     title: "Why 'Architectural Precision' matters in management UI.", 
+                     title: "Why &apos;Architectural Precision&apos; matters in management UI.", 
                      tag: "Design", 
                      author: "Marcus Thorne", 
                      image: "/images/resources/design.png",
@@ -105,7 +105,7 @@ export default function ResourcesPage() {
                             <span>{post.readTime}</span>
                          </div>
                          <h3 className="text-2xl font-black tracking-tight text-on-surface group-hover:text-primary transition-colors leading-tight">{post.title}</h3>
-                         <p className="text-on-surface-variant text-sm font-medium line-clamp-2">Efficiently scale your tuition center's infrastructure without compromising on student experience or tutor performance metrics.</p>
+                         <p className="text-on-surface-variant text-sm font-medium line-clamp-2">Efficiently scale your tuition center&apos;s infrastructure without compromising on student experience or tutor performance metrics.</p>
                       </div>
                    </article>
                  ))}

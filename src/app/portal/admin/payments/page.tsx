@@ -213,7 +213,7 @@ export default function AdminPaymentsPage() {
                   </div>
                   <div className="space-y-2">
                     <h3 className="text-2xl font-black text-on-surface">Payment Recorded!</h3>
-                    <p className="text-sm font-medium text-on-surface-variant opacity-60">The student's transaction has been successfully logged.</p>
+                    <p className="text-sm font-medium text-on-surface-variant opacity-60">The student&apos;s transaction has been successfully logged.</p>
                   </div>
                 </div>
               ) : (
@@ -291,7 +291,17 @@ export default function AdminPaymentsPage() {
   )
 }
 
-function StatCard({ label, value, trend, trendUp, icon: Icon, color, alert }: any) {
+interface StatCardProps {
+  label: string;
+  value: string;
+  trend?: string;
+  trendUp?: boolean;
+  icon: any;
+  color: string;
+  alert?: boolean;
+}
+
+function StatCard({ label, value, trend, trendUp, icon: Icon, color, alert }: StatCardProps) {
   return (
     <div className="bg-white p-8 rounded-[2rem] border border-outline-variant/5 shadow-ambient group hover:border-primary/20 transition-all flex flex-col justify-between h-full relative overflow-hidden">
        {alert && <div className="absolute top-4 right-4 h-2 w-2 rounded-full bg-error animate-pulse"></div>}

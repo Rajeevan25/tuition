@@ -30,9 +30,30 @@ const STEPS = [
   { id: 5, title: "Review", icon: CheckCircle2 },
 ]
 
+interface BatchFormData {
+  name: string;
+  subject: string;
+  grade: string;
+  branch: string;
+  type: string;
+  capacity: number;
+  startDate: string;
+  endDate: string;
+  teacher: { id: number; name: string; subject: string } | null;
+  schedule: Array<{
+    id: number;
+    day: string;
+    startTime: string;
+    duration: string;
+    room: string;
+    conflict: boolean;
+  }>;
+  students: number[];
+}
+
 export default function BatchCreationWizard() {
   const [currentStep, setCurrentStep] = useState(1)
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<BatchFormData>({
     name: "",
     subject: "Physics",
     grade: "Grade 11",
@@ -175,7 +196,7 @@ export default function BatchCreationWizard() {
   )
 }
 
-function BasicInfoStep({ formData, setFormData }: any) {
+function BasicInfoStep({ formData, setFormData }: { formData: BatchFormData; setFormData: (data: BatchFormData) => void }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
        <div className="space-y-6">
@@ -277,7 +298,7 @@ function BasicInfoStep({ formData, setFormData }: any) {
   )
 }
 
-function AssignTeacherStep({ formData, setFormData }: any) {
+function AssignTeacherStep({ formData, setFormData }: { formData: BatchFormData; setFormData: (data: BatchFormData) => void }) {
   const teachers = [
     { id: 1, name: "Kamal Silva", subject: "Physics", exp: "12 Years", batches: 12, rating: 4.9, available: true },
     { id: 2, name: "Sunil Perera", subject: "Mathematics", exp: "8 Years", batches: 5, rating: 4.7, available: true },
@@ -351,7 +372,7 @@ function AssignTeacherStep({ formData, setFormData }: any) {
   )
 }
 
-function ScheduleSetupStep({ formData, setFormData }: any) {
+function ScheduleSetupStep({ formData, setFormData }: { formData: BatchFormData; setFormData: (data: BatchFormData) => void }) {
   const addSlot = () => {
     setFormData({
       ...formData,
@@ -362,7 +383,7 @@ function ScheduleSetupStep({ formData, setFormData }: any) {
   const removeSlot = (id: number) => {
     setFormData({
       ...formData,
-      schedule: formData.schedule.filter((s: any) => s.id !== id)
+      schedule: formData.schedule.filter((s: { id: number }) => s.id !== id)
     })
   }
 
@@ -380,7 +401,7 @@ function ScheduleSetupStep({ formData, setFormData }: any) {
                 </button>
              </div>
              
-             {formData.schedule.map((slot: any) => (
+             {formData.schedule.map((slot) => (
                <div key={slot.id} className={cn(
                  "bg-white p-8 rounded-[2.5rem] border shadow-sm space-y-6 relative group overflow-hidden transition-all",
                  slot.conflict ? "border-amber-500/30" : "border-outline-variant/5"
@@ -453,7 +474,7 @@ function ScheduleSetupStep({ formData, setFormData }: any) {
                       <p className="text-[10px] opacity-60 font-medium">{formData.teacher?.name} is free</p>
                    </div>
                 </div>
-                {formData.schedule.some((s: any) => s.conflict) && (
+                {formData.schedule.some((s: { conflict: boolean }) => s.conflict) && (
                   <div className="flex items-center gap-4 bg-white/10 p-5 rounded-2xl">
                      <div className="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center shadow-lg shadow-amber-500/20">
                         <AlertCircle className="h-6 w-6" />
@@ -474,7 +495,7 @@ function ScheduleSetupStep({ formData, setFormData }: any) {
   )
 }
 
-function StudentEnrollmentStep({ formData, setFormData }: any) {
+function StudentEnrollmentStep({ formData, setFormData }: { formData: BatchFormData; setFormData: (data: BatchFormData) => void }) {
   const [selectedStudents, setSelectedStudents] = useState(formData.students)
 
   const toggleStudent = (id: number) => {
@@ -553,8 +574,8 @@ function StudentEnrollmentStep({ formData, setFormData }: any) {
   )
 }
 
-function ReviewStep({ formData }: any) {
-  const hasConflicts = formData.schedule.some((s: any) => s.conflict)
+function ReviewStep({ formData }: { formData: BatchFormData }) {
+  const hasConflicts = formData.schedule.some((s) => s.conflict)
 
   return (
     <div className="space-y-10">

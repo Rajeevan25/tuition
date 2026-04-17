@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { 
   CheckCircle2, 
   Clock, 
@@ -18,6 +18,11 @@ import { DashboardHeader } from "@/components/dashboard/DashboardHeader"
 
 export default function AttendancePage() {
   const [selectedClass, setSelectedClass] = useState("A/L Combined Mathematics - Hall A")
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   const metrics = {
     rate: "94",
@@ -53,7 +58,7 @@ export default function AttendancePage() {
         <div className="lg:col-span-4 bg-surface-container-lowest rounded-[3rem] p-10 shadow-sm flex flex-col justify-between overflow-hidden relative border border-slate-50 group hover:shadow-xl hover:shadow-indigo-100/30 transition-all duration-500">
            <div className="absolute -right-10 -top-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:scale-150 transition-transform"></div>
            <div className="relative z-10">
-              <p className="text-[10px] font-black tracking-widest text-outline uppercase mb-2">Today's Center Rate</p>
+              <p className="text-[10px] font-black tracking-widest text-outline uppercase mb-2">Today&apos;s Center Rate</p>
               <h3 className="text-7xl font-headline font-black text-on-surface tracking-tighter">
                 {metrics.rate}<span className="text-primary text-3xl font-black">%</span>
               </h3>
@@ -66,7 +71,7 @@ export default function AttendancePage() {
 
         <div className="lg:col-span-8 bg-surface-container-low/50 rounded-[3rem] p-10 space-y-8 border border-white/50 backdrop-blur-sm">
            <div className="flex items-center justify-between">
-              <h3 className="text-2xl font-black font-headline tracking-tight">Today's Classes</h3>
+              <h3 className="text-2xl font-black font-headline tracking-tight">Today&apos;s Classes</h3>
               <span className="text-[10px] font-black text-primary bg-primary-fixed px-4 py-2 rounded-full uppercase tracking-widest">
                 {metrics.remaining} Classes Remaining
               </span>

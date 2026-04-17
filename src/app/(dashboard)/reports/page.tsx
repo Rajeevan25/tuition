@@ -133,7 +133,7 @@ export default function ReportsPage() {
         <div className="lg:col-span-4 primary-gradient p-10 rounded-[4rem] text-white shadow-2xl shadow-primary/20 flex flex-col justify-between group h-full">
            <div className="space-y-6">
               <h4 className="text-2xl font-black font-headline tracking-tighter">Student Distribution</h4>
-              <p className="text-on-primary-container font-bold opacity-80 leading-relaxed italic">"Enrollment has peaked this term with a 34% increase in A/L Physics batches."</p>
+              <p className="text-on-primary-container font-bold opacity-80 leading-relaxed italic">&quot;Enrollment has peaked this term with a 34% increase in A/L Physics batches.&quot;</p>
            </div>
 
            <div className="h-[250px] w-full mt-10 relative">

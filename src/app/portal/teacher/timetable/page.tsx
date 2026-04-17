@@ -31,7 +31,7 @@ const TEACHER_EVENTS = [
 
 export default function TeacherTimetablePage() {
   const [view, setView] = useState("week")
-  const [selectedEvent, setSelectedEvent] = useState<any>(null)
+  const [selectedEvent, setSelectedEvent] = useState<typeof TEACHER_EVENTS[0] | null>(null)
 
   return (
     <div className="min-h-screen bg-slate-50/50 p-8 space-y-10">

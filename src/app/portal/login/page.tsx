@@ -58,7 +58,7 @@ export default function LoginSelectorPage() {
             Welcome to <span className="text-primary">CenterHub</span>
           </h1>
           <p className="text-lg text-on-surface-variant font-medium max-w-xl mx-auto">
-            Choose your portal to access your tuition institute's workspace.
+            Choose your portal to access your tuition institute&apos;s workspace.
           </p>
         </div>
 

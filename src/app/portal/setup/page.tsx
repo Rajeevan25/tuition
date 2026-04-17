@@ -64,7 +64,7 @@ export default function TenantSetupWizard() {
         <aside className="w-full md:w-80 space-y-6">
            <div className="space-y-1">
               <h2 className="text-3xl font-black text-on-surface">Initial Setup</h2>
-              <p className="text-sm text-on-surface-variant font-medium">Let's configure your academic environment.</p>
+              <p className="text-sm text-on-surface-variant font-medium">Let&apos;s configure your academic environment.</p>
            </div>
            
            <nav className="space-y-2">
@@ -220,6 +220,6 @@ function StatusBadge({ status }: { status: "active" }) {
   )
 }
 
-function IconComponent({ icon: Icon }: { icon: any }) {
+function IconComponent({ icon: Icon }: { icon: React.ComponentType<{ className?: string }> }) {
   return <Icon className="h-16 w-16" />
 }

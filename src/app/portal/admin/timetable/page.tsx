@@ -137,7 +137,7 @@ export default function GlobalTimetablePage() {
                      <AlertCircle className="h-6 w-6" />
                      <h3 className="text-lg font-black tracking-tight">Conflict detected</h3>
                   </div>
-                  <p className="text-xs font-medium opacity-60 leading-relaxed">Grade 10 Basic Maths overlaps with Mr. Sunil Peerera's private session on Monday at 10 AM.</p>
+                  <p className="text-xs font-medium opacity-60 leading-relaxed">Grade 10 Basic Maths overlaps with Mr. Sunil Peerera&apos;s private session on Monday at 10 AM.</p>
                   <button onClick={handleGenerate} className="w-full py-4 rounded-2xl bg-white text-amber-600 font-black text-xs uppercase tracking-widest hover:scale-[1.02] transition-all">
                      Auto-Fix Now
                   </button>

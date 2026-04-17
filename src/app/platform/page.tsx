@@ -32,7 +32,7 @@ export default function PlatformPage() {
               The Engine of <span className="text-primary">Growth</span>.
             </h1>
             <p className="text-xl text-on-surface-variant leading-relaxed">
-              Explore the modular architecture that powers the world's most sophisticated tuition centers. Built for scale, security, and velocity.
+              Explore the modular architecture that powers the world&apos;s most sophisticated tuition centers. Built for scale, security, and velocity.
             </p>
           </div>
 

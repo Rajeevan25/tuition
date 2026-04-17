@@ -228,7 +228,14 @@ export default function AddStudentPage() {
   )
 }
 
-function InputGroup({ label, placeholder, type = "text", icon: Icon }: any) {
+interface InputGroupProps {
+  label: string;
+  placeholder?: string;
+  type?: string;
+  icon?: any;
+}
+
+function InputGroup({ label, placeholder, type = "text", icon: Icon }: InputGroupProps) {
   return (
     <div className="space-y-2">
       <label className="text-[10px] font-black uppercase text-on-surface-variant px-1 opacity-60">{label}</label>

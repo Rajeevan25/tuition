@@ -83,7 +83,7 @@ export default function InstituteOwnerDashboard() {
         {/* Class Schedule Table */}
         <div className="lg:col-span-8 space-y-6">
            <div className="flex justify-between items-center px-4">
-              <h3 className="font-headline text-2xl font-black tracking-tight">Today's Sessions</h3>
+              <h3 className="font-headline text-2xl font-black tracking-tight">Today&apos;s Sessions</h3>
               <button className="text-[10px] font-black uppercase text-primary tracking-widest hover:underline">Full Schedule</button>
            </div>
            <div className="bg-white rounded-[2.5rem] border border-outline-variant/5 shadow-ambient overflow-hidden text-left">

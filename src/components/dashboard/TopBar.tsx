@@ -132,13 +132,13 @@ export function TopBar({
               
               <div className="space-y-1">
                 <Link 
-                  href="/settings" 
+                  href="/portal/profile/settings" 
                   className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors"
                 >
                   <User className="h-4 w-4" /> Profile Details
                 </Link>
                 <Link 
-                  href="/settings" 
+                  href="/portal/profile/settings" 
                   className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors"
                 >
                   <Settings className="h-4 w-4" /> Hub Settings
@@ -148,7 +148,7 @@ export function TopBar({
               <div className="h-px bg-outline-variant/5 mx-2 my-3" />
               
               <Link 
-                href="/login" 
+                href="/portal/login" 
                 className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-black text-error hover:bg-error/5 transition-colors"
               >
                 <LogOut className="h-4 w-4" /> Sign Out

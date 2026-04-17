@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, Suspense } from "react"
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { 
@@ -38,7 +38,7 @@ const MOCK_TEACHERS = [
   { id: "T3", name: "Nimali de Silva", email: "nimali@centerhub.lk", subject: "Chemistry", status: "Inactive", branch: "Kandy", avatar: "NS" },
 ]
 
-export default function UserManagementPage() {
+function UserManagementContent() {
   const searchParams = useSearchParams()
   const initialTab = searchParams.get("role") === "teacher" ? "teachers" : "students"
   const [activeTab, setActiveTab] = useState(initialTab)
@@ -204,5 +204,13 @@ export default function UserManagementPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function UserManagementPage() {
+  return (
+    <Suspense fallback={<div className="p-12 text-center font-bold opacity-40 uppercase tracking-widest text-xs">Loading Management...</div>}>
+      <UserManagementContent />
+    </Suspense>
   )
 }

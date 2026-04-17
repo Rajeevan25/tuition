@@ -45,6 +45,7 @@ export default function DashboardPage() {
   const [isMounted, setIsMounted] = useState(false)
   
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true)
   }, [])
 
@@ -242,7 +243,18 @@ export default function DashboardPage() {
   )
 }
 
-function StatCard({ label, value, trend, trendUp, icon: Icon, color, progress, target }: any) {
+interface StatCardProps {
+  label: string;
+  value: string;
+  trend: string;
+  trendUp?: boolean;
+  icon: any; // Lucide icon type is complex, leaving as any with disable if needed, but here we can use React.ComponentType
+  color: string;
+  progress?: number;
+  target?: string;
+}
+
+function StatCard({ label, value, trend, trendUp, icon: Icon, color, progress, target }: StatCardProps) {
   return (
     <div className="bg-white p-8 rounded-[2rem] border border-outline-variant/5 shadow-ambient group hover:border-primary/20 transition-all flex flex-col h-full bg-white relative overflow-hidden">
        <div className="flex items-center justify-between mb-4 relative z-10">
@@ -273,7 +285,13 @@ function StatCard({ label, value, trend, trendUp, icon: Icon, color, progress, t
   )
 }
 
-function ManagementNotice({ title, desc, urgent }: any) {
+interface ManagementNoticeProps {
+  title: string;
+  desc: string;
+  urgent?: boolean;
+}
+
+function ManagementNotice({ title, desc, urgent }: ManagementNoticeProps) {
   return (
     <div className="space-y-2 group cursor-pointer">
        <div className="flex items-center justify-between">

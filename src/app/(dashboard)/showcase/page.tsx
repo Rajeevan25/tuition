@@ -1,7 +1,7 @@
 "use client"
 
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader"
-import { Sparkles, MonitorWrapper, Smartphone, BrainCircuit, Globe, Layers, Zap, Rocket } from "lucide-react"
+import { Smartphone, BrainCircuit, Globe, Layers, Zap, Rocket } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const ShowcaseCard = ({ icon: Icon, title, description, color, imageLabel }: { icon: any, title: string, description: string, color: string, imageLabel: string }) => (

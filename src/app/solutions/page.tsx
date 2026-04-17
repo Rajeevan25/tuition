@@ -32,7 +32,7 @@ export default function SolutionsPage() {
                  One Curator. <br/> <span className="text-primary">Infinite Solutions</span>.
               </h1>
               <p className="text-xl text-on-surface-variant leading-relaxed font-medium">
-                 CenterHub is built on a universal academic logic that adapts to the specific needs of your institution. Whether you teach Combined Maths, Physics, or Languages—the curator has you covered.
+                 CenterHub is built on a universal academic logic that adapts to the specific needs of your institution. Whether you teach Combined Maths, Physics, or Languages&mdash;the curator has you covered.
               </p>
            </div>
 
@@ -95,7 +95,7 @@ export default function SolutionsPage() {
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                  <div className="space-y-8">
                     <h2 className="font-headline text-4xl lg:text-6xl font-black tracking-tighter">Your Industry, <br /> <span className="text-primary-fixed">Our Priority</span>.</h2>
-                    <p className="text-lg opacity-70 leading-relaxed">CenterHub doesn't just manage; it curates. Every module you see is the result of thousands of hours of industry-specific research.</p>
+                    <p className="text-lg opacity-70 leading-relaxed">CenterHub doesn&apos;t just manage; it curates. Every module you see is the result of thousands of hours of industry-specific research.</p>
                     <div className="flex flex-wrap gap-4">
                        <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-xs font-bold">
                           <ShieldCheck className="h-4 w-4 text-primary-fixed" /> Syllabus Compliant

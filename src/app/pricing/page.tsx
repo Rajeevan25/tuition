@@ -32,7 +32,7 @@ export default function PricingPage() {
               Simple. <span className="text-primary">Reliable</span>.
             </h1>
             <p className="text-xl text-on-surface-variant max-w-2xl mx-auto font-medium">
-              Choose the plan that fits your center's growth stage. All plans include our premium Architectural Curator design system.
+              Choose the plan that fits your center&apos;s growth stage. All plans include our premium Architectural Curator design system.
             </p>
           </div>
 
